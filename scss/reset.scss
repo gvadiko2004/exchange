@@ -264,6 +264,9 @@ input[type="number"] {
 }
 
 // cir-img
+.cir {
+  pointer-events: none !important;
+}
 
 .cir-img {
   position: absolute;
