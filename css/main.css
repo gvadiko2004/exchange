@@ -664,7 +664,7 @@ input[type=number] {
           justify-content: center;
   padding: 20px 0;
   color: #fff;
-  border-radius: 24px;
+  border-radius: 100px;
   margin-top: 20px;
   background: linear-gradient(86deg, rgb(95, 207, 229) 0%, rgb(27, 126, 143) 100%);
   font-weight: 900;
