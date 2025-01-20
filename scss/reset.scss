@@ -267,9 +267,9 @@ input[type="number"] {
 
 .cir-img {
   position: absolute;
-  top: -100%;
-  left: -50%;
-  opacity: 0.6;
+  top: -90%;
+  left: -40%;
+  opacity: 0.8;
   z-index: 1;
 }
 
@@ -277,8 +277,8 @@ input[type="number"] {
   position: absolute;
   bottom: -100%;
   right: -50%;
+  opacity: 0.8;
   z-index: 1;
-  opacity: 0.6;
 }
 
 .title {
