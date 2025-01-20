@@ -286,3 +286,26 @@ input[type="number"] {
   font-size: 30px;
   font-weight: 700;
 }
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 32px;
+  font-weight: 400;
+  font-family: var(--font-unbounded);
+
+  .sep-line {
+    display: inline-block;
+    width: 100%;
+    background-color: #000;
+    height: 1px;
+    position: relative;
+    top: 4px;
+  }
+}
+
+.service-title {
+  flex-direction: row-reverse;
+}
