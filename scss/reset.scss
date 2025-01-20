@@ -213,6 +213,10 @@ a {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (max-width: 440px) {
+    padding: 0 12px;
+  }
 }
 
 .icon-logo {
@@ -295,9 +299,13 @@ input[type="number"] {
   align-items: center;
   gap: 20px;
 
-  font-size: 32px;
+  font-size: clamp(1rem, 0.476rem + 1.9vw, 2rem);
   font-weight: 400;
   font-family: var(--font-unbounded);
+
+  @media (max-width: 440px) {
+    gap: 12px;
+  }
 
   .sep-line {
     display: inline-block;
@@ -306,6 +314,10 @@ input[type="number"] {
     height: 1px;
     position: relative;
     top: 4px;
+
+    @media (max-width: 440px) {
+      top: 1px;
+    }
   }
 }
 

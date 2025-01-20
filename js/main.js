@@ -8,7 +8,9 @@ select.forEach((selectOption) => {
     // Якщо це не поточний елемент, то скидаємо "active" в інших елементах
     select.forEach((otherSelectOption) => {
       if (otherSelectOption !== selectOption) {
-        otherSelectOption.querySelector(".hero__dropdown").classList.remove("active");
+        otherSelectOption
+          .querySelector(".hero__dropdown")
+          .classList.remove("active");
         otherSelectOption.querySelector(".svg-icon").classList.remove("active");
       }
     });
@@ -45,5 +47,21 @@ currencyInput.addEventListener("input", function () {
   currencyInput.value = value;
   if (cursorPosition !== value.length) {
     currencyInput.setSelectionRange(cursorPosition, cursorPosition);
+  }
+});
+
+// header__list
+
+const menuBtn = document.querySelector(".btn-open");
+const menu = document.querySelector(".header__list");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+
+  if (menu.classList.contains("active")) {
+    document.body.style.overflow = "hidden";
+    window.scrollTo(0, 0);
+  } else {
+    document.body.style.overflow = "";
   }
 });

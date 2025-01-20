@@ -7,14 +7,14 @@ const selectPuts = document.querySelector(".hero__select-puts");
 const heroIconPut = document.querySelector(".hero__icon-put img");
 
 let selectedCryptoPut = null;
-let cryptos = []; // Сюда будем загружать криптовалюты
+let cryptos = [];
 
-// Функция для получения цен криптовалют
 async function fetchCryptoPrices() {
-  const response = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,litecoin,ethereum,tether,binancecoin,tron,dogecoin,dai,toncoin&vs_currencies=rub");
+  const response = await fetch(
+    "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,litecoin,ethereum,tether,binancecoin,tron,dogecoin,dai,toncoin&vs_currencies=rub"
+  );
   const data = await response.json();
 
-  // Проверка на наличие данных для каждой криптовалюты
   cryptos = [
     { name: "USDT TRC20", price: data.tether?.rub ? data.tether.rub * 1.042 : 0, image: "./images/trc20.svg" },
     { name: "USDT BEP20", price: data.tether?.rub ? data.tether.rub * 1.042 : 0, image: "./images/trc20.svg" },
@@ -23,22 +23,30 @@ async function fetchCryptoPrices() {
     { name: "LTC", price: data.litecoin?.rub ? data.litecoin.rub * 1.042 : 0, image: "./images/ltc.svg" },
     { name: "BNB", price: data.binancecoin?.rub ? data.binancecoin.rub * 1.042 : 0, image: "./images/bnb.svg" },
     { name: "ETH", price: data.ethereum?.rub ? data.ethereum.rub * 1.028 : 0, image: "./images/eth.svg" },
-    { name: "TRX", price: data.tron?.rub ? data.tron.rub * 1.042 : 0, image: "./images/trx.svg" }, 
+    { name: "TRX", price: data.tron?.rub ? data.tron.rub * 1.042 : 0, image: "./images/trx.svg" },
     { name: "DOGE", price: data.dogecoin?.rub ? data.dogecoin.rub * 1.042 : 0, image: "./images/doge.svg" },
-    { name: "DAI", price: data.dai?.rub ? data.dai.rub * 1.042 : 0, image: "./images/dai.svg" }, 
+    { name: "DAI", price: data.dai?.rub ? data.dai.rub * 1.042 : 0, image: "./images/dai.svg" },
     { name: "TON", price: data.toncoin?.rub ? data.toncoin.rub * 1.042 : 0, image: "./images/ton.svg" },
   ];
 }
 
+function updateCurrencyPutText(name) {
+  const currencyPutElement = document.querySelector(".currency-put");
+  if (currencyPutElement) {
+    currencyPutElement.textContent = name;
+  }
+}
+
 async function updateCryptoList() {
   await fetchCryptoPrices();
-  
+
   cryptoList.innerHTML = "";
-  
+
   selectedCryptoPut = cryptos[0];
   curencyPrice.innerText = `${selectedCryptoPut.name}: ${selectedCryptoPut.price.toFixed(2)} ₽`;
   selectPuts.textContent = selectedCryptoPut.name;
   heroIconPut.src = selectedCryptoPut.image;
+  updateCurrencyPutText(selectedCryptoPut.name);
 
   cryptos.forEach((crypto, index) => {
     const li = document.createElement("li");
@@ -63,6 +71,7 @@ async function updateCryptoList() {
       curencyPrice.innerText = `${crypto.name}: ${crypto.price.toFixed(2)} ₽`;
       selectPuts.textContent = crypto.name;
       heroIconPut.src = crypto.image;
+      updateCurrencyPutText(crypto.name);
 
       currencyInputPut.value = "";
       currencyInputSell.value = "";
@@ -70,18 +79,15 @@ async function updateCryptoList() {
 
     cryptoList.appendChild(li);
 
-    // Добавляем класс active к первому элементу
     if (index === 0) {
       li.classList.add("active");
     }
   });
 
-  // Автоматически устанавливаем значение 100 в currency-input-put
   currencyInputPut.value = "100";
-  currencyInputPut.dispatchEvent(new Event('input')); // Имитируем ввод, чтобы обновить currencyInputSell
+  currencyInputPut.dispatchEvent(new Event("input"));
 }
 
-// Обработчик ввода для currencyInputPut
 currencyInputPut.addEventListener("input", () => {
   const amount = parseFloat(currencyInputPut.value);
   if (!isNaN(amount) && amount > 0) {
@@ -92,7 +98,6 @@ currencyInputPut.addEventListener("input", () => {
   }
 });
 
-// Обработчик ввода для currencyInputSell
 currencyInputSell.addEventListener("input", () => {
   const amount = parseFloat(currencyInputSell.value);
   if (!isNaN(amount) && amount > 0) {
@@ -103,10 +108,8 @@ currencyInputSell.addEventListener("input", () => {
   }
 });
 
-// Запуск обновления списка криптовалют при загрузке страницы
 document.addEventListener("DOMContentLoaded", updateCryptoList);
 
-// Для списка криптовалют для продажи
 const changeSellContainer = document.querySelector(".hero__change-sell");
 
 if (changeSellContainer) {
@@ -153,8 +156,6 @@ if (changeSellContainer) {
         selectedCryptoSell = crypto;
         sellIcon.src = crypto.image;
         sellIcon.alt = crypto.name;
-
-        // Обновляем текст в hero__select-sell
         heroSelectSell.textContent = crypto.name;
 
         const selectedItem = changeSellContainer.querySelector(".hero__select-item.active");
@@ -175,13 +176,10 @@ if (changeSellContainer) {
 
       sellList.appendChild(li);
 
-      // Добавляем класс active к первому элементу
       if (index === 0) {
         li.classList.add("active");
         sellIcon.src = crypto.image;
         sellIcon.alt = crypto.name;
-
-        // Устанавливаем начальный текст в hero__select-sell
         heroSelectSell.textContent = crypto.name;
       }
     });

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SafeXchange</title>
 
-    <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/swiper.css" />
     <link rel="stylesheet" href="./css/swiper-min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
 
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
   </head>
@@ -48,6 +48,8 @@
                 <li class="header__list-item">
                   <a href="#!" class="header__list-link">AML</a>
                 </li>
+
+                <button class="btn-reset header__btn header__btn-ph">Войти</button>
               </ul>
             </div>
 
@@ -96,6 +98,10 @@
               </ul>
 
               <button class="btn-reset header__btn">Войти</button>
+
+              <button class="btn-reset btn-open">
+                <img width="32" src="./images/btn-open.png" alt="">
+              </button>
             </div>
           </div>
         </div>
@@ -105,6 +111,13 @@
         <section class="hero" id="hero">
           <div class="container">
             <div class="hero__inner">
+              <div class="hero__content hero__content-ph">
+                <h2 class="hero__content-title">Safe<span>Xchange</span></h2>
+                <h4 class="hero__content-subtitle">
+                  Crypto - просто меняй, переводи, оплачивай
+                </h4>
+                </div>
+              
               <div class="hero__start">
                 <div class="hero__content">
                   <h2 class="hero__content-title">Safe<span>Xchange</span></h2>
@@ -999,13 +1012,15 @@
                       </div>
                     </div>
 
-                    <div class="currency">
+                    <div class="currency ">
                       <input
                         type="text"
                         placeholder="0.00"
                         class="input-reset currency-input currency-input-put"
                         id="currencyInput"
                       />
+
+                      <span class="currency-put"></span>
                     </div>
                   </div>
 

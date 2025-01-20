@@ -15,13 +15,21 @@
   &__content-item {
     position: relative;
 
+    background: #f6f7f9;
+    padding: 20px;
+    border-radius: 24px;
+
+    @media (max-width: 768px) {
+      border-radius: 14px;
+    }
+
     .top {
       display: flex;
       align-items: center;
       gap: 8px;
 
       .testimonials__content-name {
-        font-size: 14px;
+        font-size: clamp(0.75rem, 0.685rem + 0.24vw, 0.875rem);
         position: relative;
         bottom: 2px;
       }
@@ -29,7 +37,7 @@
 
     .center {
       p {
-        font-size: 12px;
+        font-size: clamp(0.688rem, 0.655rem + 0.12vw, 0.75rem);
         line-height: 155%;
         margin: 20px 0 12px 0;
       }
@@ -38,7 +46,7 @@
     .bottom {
       span {
         opacity: 0.6;
-        font-size: 12px;
+        font-size: clamp(0.688rem, 0.655rem + 0.12vw, 0.75rem);
         font-weight: 400;
         text-decoration: underline;
       }
@@ -57,16 +65,16 @@
 }
 
 .testimonials-title {
-  font-size: 24px;
+  font-size: clamp(1.25rem, 1.119rem + 0.48vw, 1.5rem);
   font-family: var(--font-unbounded);
 }
 
 .testimonials-sbutitle {
-  font-size: 16px;
+  font-size: clamp(0.75rem, 0.619rem + 0.48vw, 1rem);
   line-height: 155%;
   font-weight: 400;
   max-width: 520px;
-  margin: 20px 0 32px 0;
+  margin: 20px 0 0 0;
 
   span {
     color: var(--primaru-color);
@@ -79,10 +87,19 @@
   align-items: center;
   gap: 4px;
   position: absolute;
-  right: 10px;
-  top: 4px;
+  right: 20px;
+  top: 20px;
 
   img {
     width: 14px;
+  }
+}
+
+.swiper-testimonials {
+  @media (max-width: 768px) {
+    padding: 100px;
+    margin: -100px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
