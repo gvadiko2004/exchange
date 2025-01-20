@@ -414,6 +414,18 @@
 
 .svg-icon.active {
   transform: rotate(180deg);
+ 
+}
+
+.svg-icon {
+  svg {
+    position: relative;
+    top: 2px;
+    @media (max-width: 440px) {
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 .currency-input {
@@ -577,7 +589,6 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
 
 .btn-open {
   img {

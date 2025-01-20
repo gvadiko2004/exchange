@@ -853,6 +853,17 @@ input[type=number] {
           transform: rotate(180deg);
 }
 
+.svg-icon svg {
+  position: relative;
+  top: 2px;
+}
+@media (max-width: 440px) {
+  .svg-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .currency-input {
   font-weight: 900;
   margin-top: 12px;
