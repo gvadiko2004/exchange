@@ -2277,6 +2277,205 @@ input[type=number] {
           flex-direction: row-reverse;
 }
 
+.user__form {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: #0c0c0c;
+  padding: 52px 32px;
+  border-radius: 24px;
+  max-width: 720px;
+  width: 100%;
+  z-index: 200;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.user__form.active {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.user__form .btn-close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+.user__form .btn-close svg path {
+  stroke: #fff;
+}
+.user__form-title {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-unbounded);
+}
+.user__form-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 4px;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 32px 0 0 0;
+}
+.user__form-subtitle {
+  color: #fff;
+}
+.user__form-input {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  padding: 20px 20px 20px 30px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  margin-top: 12px;
+}
+.user__form-input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.user__form-input::-moz-placeholder {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.user__form-input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.user__form-input::-ms-input-placeholder {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.user__form-input::placeholder {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.user__form-action {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn-save-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  gap: 10px;
+  cursor: pointer;
+}
+.btn-save-me span {
+  font-size: 12px;
+  font-family: var(--font-unbounded);
+  font-weight: 400;
+}
+
+.btn-forgot-pass {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.sign-in-help {
+  text-align: center;
+  color: #fff;
+  margin: 32px 0 0 0;
+  display: block;
+}
+.sign-in-help span {
+  display: block;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+@media (min-width: 1080px) {
+  .sign-in-help ul a:hover {
+    opacity: 0.8;
+  }
+}
+.sign-in-help ul img {
+  width: 44px;
+}
+
+.user__form-acc {
+  background: radial-gradient(150% 150% at 8.37% 0, #5c5c5c 0, #000 100%);
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 14px;
+  border-radius: 200px;
+  display: -ms-grid;
+  display: grid;
+  gap: 12px;
+  -ms-grid-columns: 1fr 12px 1fr;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(255, 255, 255, 0.3215686275);
+  margin-bottom: 12px;
+}
+.user__form-acc button {
+  font-size: 16px;
+  color: #fff;
+  font-family: var(--font-unbounded);
+  padding: 12px 0;
+  border-radius: 100px;
+  font-weight: 400;
+}
+.user__form-acc button.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.form__btn {
+  background: linear-gradient(146deg, rgb(95, 207, 229) 0%, rgb(15, 85, 97) 100%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 12px 32px;
+  border-radius: 100px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 70%;
+  margin-top: 32px;
+}
+
+.btn-close {
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  .btn-close:hover {
+    opacity: 0.8;
+  }
+}
+
 .footer {
   margin-bottom: 40px;
 }

@@ -103,24 +103,57 @@ dropAccItem.forEach((dropItem) => {
 const countryItem = document.querySelectorAll(".mobile-country-list_country");
 
 countryItem.forEach((itemCountry) => {
-  const contentCountryClick = itemCountry.querySelector(".mobile-country-list_content");
+  const contentCountryClick = itemCountry.querySelector(
+    ".mobile-country-list_content"
+  );
   const icCountry = itemCountry.querySelector(".ic-country");
 
   itemCountry.addEventListener("click", function () {
     // Проверяем, если контент открыт, скрываем его и убираем поворот
-    if (contentCountryClick.style.display === 'flex') {
-      contentCountryClick.style.display = 'none';
-      icCountry.style.transform = 'rotate(0deg)'; // Убираем поворот
+    if (contentCountryClick.style.display === "flex") {
+      contentCountryClick.style.display = "none";
+      icCountry.style.transform = "rotate(0deg)"; // Убираем поворот
     } else {
       // Закрываем все другие контенты и открываем текущий
       countryItem.forEach((otherItemCountry) => {
-        const otherContent = otherItemCountry.querySelector(".mobile-country-list_content");
-        otherContent.style.display = 'none'; // Закрыть все другие
+        const otherContent = otherItemCountry.querySelector(
+          ".mobile-country-list_content"
+        );
+        otherContent.style.display = "none"; // Закрыть все другие
         const otherIcCountry = otherItemCountry.querySelector(".ic-country");
-        otherIcCountry.style.transform = 'rotate(0deg)'; // Убираем поворот у других
+        otherIcCountry.style.transform = "rotate(0deg)"; // Убираем поворот у других
       });
-      contentCountryClick.style.display = 'flex'; // Открыть текущий
-      icCountry.style.transform = 'rotate(180deg)'; // Поворот на 180 градусов
+      contentCountryClick.style.display = "flex"; // Открыть текущий
+      icCountry.style.transform = "rotate(180deg)"; // Поворот на 180 градусов
     }
+  });
+});
+
+// btn-close
+const formUser = document.querySelector(".user__form");
+const btnCloseSign = document.querySelector(".btn-close");
+const btnOpenSign = document.querySelectorAll(".header__btn");
+
+btnOpenSign.forEach((btnOpenForm) => {
+  btnOpenForm.addEventListener("click", function () {
+    formUser.classList.add("active");
+  });
+});
+
+btnCloseSign.addEventListener("click", function () {
+  formUser.classList.remove("active");
+});
+
+// user__form-accbtn
+
+const btnAcc = document.querySelectorAll(".user__form-accbtn");
+
+btnAcc.forEach((btnaccadd) => {
+  btnaccadd.addEventListener("click", function () {
+    btnAcc.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    
+    btnaccadd.classList.add("active");
   });
 });
