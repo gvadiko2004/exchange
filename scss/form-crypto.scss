@@ -1,36 +1,58 @@
-// .form-crypto {
-//   margin: 26px 0 28px 0;
+.form-crypto {
+  margin: 40px 0 28px 0;
+  padding-top: 40px;
+  border-top: 1px solid #ffffff67;
+  @media (max-width: 440px) {
+    margin: 30px 0 28px 0;
+    padding-top: 24px;
+  }
+  .form-content-cryptos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 26px;
+    row-gap: 32px;
+    width: 100%;
 
-//   display: inline-flex;
-//   flex-direction: column;
-//   gap: 20px;
-//   width: 100%;
-// }
-// .form-crypto-tinkoff {
-// }
-// .form-crypto-input {
-//   input {
-//     width: 100%;
-//     border: 1px solid #ffffff5e;
-//     padding: 20px;
-//     border-radius: 14px;
+    @media (max-width: 1080px) {
+      row-gap: 20px;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+.form-crypto-tinkoff {
+}
+.form-crypto-input {
+  input {
+    width: 100%;
+    border: 1px solid #ffffff5e;
+    padding: 20px;
+    border-radius: 14px;
 
-//     font-size: 14px;
-//     font-family: var(--font-unbounded);
-//     font-weight: 300;
+    font-size: 14px;
+    font-family: var(--font-unbounded);
+    font-weight: 300;
 
-//     background: radial-gradient(150% 150% at 8.37% 0, #5c5c5c 0, #000 100%);
+    background: radial-gradient(150% 150% at 8.37% 0, #5c5c5c 0, #000 100%);
 
-//     color: #fff;
+    color: #fff;
 
-//     &::placeholder {
-//       font-size: 14px;
-//       font-family: var(--font-unbounded);
-//       font-weight: 300;
-//       color: #fff;
-//     }
-//   }
-// }
+    @media (max-width: 440px) {
+      padding: 16px;
+      font-size: 12px;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      font-family: var(--font-unbounded);
+      font-weight: 300;
+      color: #fff;
+
+      @media (max-width: 440px) {
+        font-size: 12px;
+      }
+    }
+  }
+}
 
 .rules {
   color: #fff;
@@ -71,6 +93,274 @@
 
   input {
     position: relative;
-    top:2px;
+    top: 2px;
   }
+}
+
+.pay-found__inner {
+  background-color: #141414;
+  padding: 32px;
+  border-radius: 24px;
+  margin-bottom: 80px;
+  color: #fff;
+
+  @media (max-width: 440px) {
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+}
+
+//
+
+.pay-found {
+  // .pay-found__inner
+
+  &__inner {
+  }
+
+  // .pay-found__content
+
+  &__content {
+  }
+
+  // .pay-found__content-septitle
+
+  &__content-septitle {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 12px;
+
+    @media (max-width: 440px) {
+      font-size: 11px;
+    }
+  }
+
+  // .pay-found__form
+
+  &__form {
+    margin-top: 30px;
+
+    img {
+      border-radius: 100px;
+      display: block;
+    }
+
+    .top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      .start {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .end {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .pay-input {
+        background-color: #fff;
+        padding: 12px 26px;
+        border-radius: 200px;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        min-height: 56px;
+
+        img {
+          @media (max-width: 440px) {
+            width: 24px !important;
+          }
+        }
+
+        @media (max-width: 440px) {
+          border-radius: 14px;
+          padding: 12px 20px;
+
+          min-height: 49px;
+        }
+
+        span {
+          color: #000;
+          font-size: 14px;
+
+          @media (max-width: 440px) {
+            font-size: 14px;
+            font-weight: 700;
+            position: relative;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      .start {
+      }
+
+      .end {
+      }
+    }
+  }
+}
+.container {
+}
+.pay {
+  // .pay__title
+
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: var(--font-unbounded);
+
+    @media (max-width: 440px) {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+}
+
+.pay-input-currency {
+  display: flex;
+  align-items: center;
+  padding: 12px 26px;
+  justify-content: space-between;
+
+  span {
+    @media (max-width: 440px) {
+      font-size: 16px !important;
+      font-weight: 700;
+    }
+  }
+}
+
+.currency-sep {
+  font-weight: 900;
+  display: block;
+  font-size: 17px;
+}
+
+.pay-info-currencys {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+  }
+
+  .pay-info-currencys-valut {
+    font-size: 14px;
+    font-weight: 300;
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+    span {
+      font-weight: 600;
+      font-size: 16px;
+
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.form-crypto-input-name {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+
+  @media (max-width: 440px) {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-size: 12px;
+  }
+}
+
+.form-content-cryptos-rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 60px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    margin-top: 30px;
+
+    .form-content-cryptos-btn {
+      margin-top: 32px;
+      padding: 12px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
+
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-content-cryptos-rules-title {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 155%;
+  max-width: 90%;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    font-size: 11px;
+  }
+
+  @media (max-width: 440px) {
+    line-height: 145%;
+    font-size: 10.5px;
+  }
+}
+
+.form-content-cryptos-btn {
+  background: linear-gradient(
+    146deg,
+    rgb(95, 207, 229) 0%,
+    rgb(15, 85, 97) 100%
+  );
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 300px;
+  width: 100%;
+  padding: 20px 0s;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.form-content-cryptos-rules-info {
+  font-size: 12px;
+  font-weight: 300;
+  text-decoration: underline;
 }

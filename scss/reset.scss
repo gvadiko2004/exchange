@@ -279,6 +279,10 @@ input[type="number"] {
   left: -40%;
   opacity: 0.8;
   z-index: 1;
+
+  @media (max-width: 440px) {
+    top: -34%;
+  }
 }
 
 .cir-img-2 {
@@ -434,4 +438,3 @@ input[type="number"] {
     left: 40px;
   }
 }
-

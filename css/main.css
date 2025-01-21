@@ -242,6 +242,11 @@ input[type=number] {
   opacity: 0.8;
   z-index: 1;
 }
+@media (max-width: 440px) {
+  .cir-img {
+    top: -34%;
+  }
+}
 
 .cir-img-2 {
   position: absolute;
@@ -2789,6 +2794,101 @@ input[type=number] {
   max-width: 220px;
   line-height: 125%;
 }
+.form-crypto {
+  margin: 40px 0 28px 0;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4039215686);
+}
+@media (max-width: 440px) {
+  .form-crypto {
+    margin: 30px 0 28px 0;
+    padding-top: 24px;
+  }
+}
+.form-crypto .form-content-cryptos {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 26px 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 26px;
+     -moz-column-gap: 26px;
+          column-gap: 26px;
+  row-gap: 32px;
+  width: 100%;
+}
+@media (max-width: 1080px) {
+  .form-crypto .form-content-cryptos {
+    row-gap: 20px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-crypto-input input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.368627451);
+  padding: 20px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-family: var(--font-unbounded);
+  font-weight: 300;
+  background: radial-gradient(150% 150% at 8.37% 0, #5c5c5c 0, #000 100%);
+  color: #fff;
+}
+@media (max-width: 440px) {
+  .form-crypto-input input {
+    padding: 16px;
+    font-size: 12px;
+  }
+}
+.form-crypto-input input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-family: var(--font-unbounded);
+  font-weight: 300;
+  color: #fff;
+}
+.form-crypto-input input::-moz-placeholder {
+  font-size: 14px;
+  font-family: var(--font-unbounded);
+  font-weight: 300;
+  color: #fff;
+}
+.form-crypto-input input:-ms-input-placeholder {
+  font-size: 14px;
+  font-family: var(--font-unbounded);
+  font-weight: 300;
+  color: #fff;
+}
+.form-crypto-input input::-ms-input-placeholder {
+  font-size: 14px;
+  font-family: var(--font-unbounded);
+  font-weight: 300;
+  color: #fff;
+}
+.form-crypto-input input::placeholder {
+  font-size: 14px;
+  font-family: var(--font-unbounded);
+  font-weight: 300;
+  color: #fff;
+}
+@media (max-width: 440px) {
+  .form-crypto-input input::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  .form-crypto-input input::-moz-placeholder {
+    font-size: 12px;
+  }
+  .form-crypto-input input:-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .form-crypto-input input::-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .form-crypto-input input::placeholder {
+    font-size: 12px;
+  }
+}
+
 .rules {
   color: #fff;
   font-weight: 400;
@@ -2831,6 +2931,274 @@ input[type=number] {
 .rules-block input {
   position: relative;
   top: 2px;
+}
+
+.pay-found__inner {
+  background-color: #141414;
+  padding: 32px;
+  border-radius: 24px;
+  margin-bottom: 80px;
+  color: #fff;
+}
+@media (max-width: 440px) {
+  .pay-found__inner {
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+}
+
+.pay-found__content-septitle {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+@media (max-width: 440px) {
+  .pay-found__content-septitle {
+    font-size: 11px;
+  }
+}
+.pay-found__form {
+  margin-top: 30px;
+}
+.pay-found__form img {
+  border-radius: 100px;
+  display: block;
+}
+.pay-found__form .top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .pay-found__form .top {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.pay-found__form .top .start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.pay-found__form .top .end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.pay-found__form .top .pay-input {
+  background-color: #fff;
+  padding: 12px 26px;
+  border-radius: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+  min-height: 56px;
+}
+@media (max-width: 440px) {
+  .pay-found__form .top .pay-input img {
+    width: 24px !important;
+  }
+}
+@media (max-width: 440px) {
+  .pay-found__form .top .pay-input {
+    border-radius: 14px;
+    padding: 12px 20px;
+    min-height: 49px;
+  }
+}
+.pay-found__form .top .pay-input span {
+  color: #000;
+  font-size: 14px;
+}
+@media (max-width: 440px) {
+  .pay-found__form .top .pay-input span {
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+  }
+}
+.pay__title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-unbounded);
+}
+@media (max-width: 440px) {
+  .pay__title {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
+.pay-input-currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 26px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 440px) {
+  .pay-input-currency span {
+    font-size: 16px !important;
+    font-weight: 700;
+  }
+}
+
+.currency-sep {
+  font-weight: 900;
+  display: block;
+  font-size: 17px;
+}
+
+.pay-info-currencys {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .pay-info-currencys {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+}
+.pay-info-currencys .pay-info-currencys-valut {
+  font-size: 14px;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .pay-info-currencys .pay-info-currencys-valut {
+    font-size: 12px;
+  }
+}
+.pay-info-currencys .pay-info-currencys-valut span {
+  font-weight: 600;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .pay-info-currencys .pay-info-currencys-valut span {
+    font-size: 13px;
+  }
+}
+
+.form-crypto-input-name {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+@media (max-width: 440px) {
+  .form-crypto-input-name {
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-size: 12px;
+  }
+}
+
+.form-content-cryptos-rules {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 28px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .form-content-cryptos-rules {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+  .form-content-cryptos-rules .form-content-cryptos-btn {
+    margin-top: 32px;
+    padding: 12px 0;
+  }
+}
+@media (max-width: 768px) {
+  .form-content-cryptos-rules {
+    gap: 20px;
+  }
+}
+.form-content-cryptos-rules .bottom {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.form-content-cryptos-rules-title {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 155%;
+  max-width: 90%;
+}
+@media (max-width: 768px) {
+  .form-content-cryptos-rules-title {
+    max-width: 100%;
+    font-size: 11px;
+  }
+}
+@media (max-width: 440px) {
+  .form-content-cryptos-rules-title {
+    line-height: 145%;
+    font-size: 10.5px;
+  }
+}
+
+.form-content-cryptos-btn {
+  background: linear-gradient(146deg, rgb(95, 207, 229) 0%, rgb(15, 85, 97) 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 300px;
+  width: 100%;
+  padding: 20px 0s;
+}
+@media (max-width: 768px) {
+  .form-content-cryptos-btn {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.form-content-cryptos-btn:hover {
+  opacity: 0.8;
+}
+
+.form-content-cryptos-rules-info {
+  font-size: 12px;
+  font-weight: 300;
+  text-decoration: underline;
 }
 
 .footer {
