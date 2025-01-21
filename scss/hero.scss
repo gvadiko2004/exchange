@@ -621,3 +621,31 @@
     max-width: 35px;
   }
 }
+
+.btn-onchange {
+  background: linear-gradient(
+    86deg,
+    rgb(95, 207, 229) 0%,
+    rgb(27, 126, 143) 100%
+  );
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+
+  svg {
+    transform: scale(0.6);
+    position: relative;
+    top: 2px;
+  }
+
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  @media (max-height: 1080px) {
+    transform: scale(0.8);
+  }
+}
