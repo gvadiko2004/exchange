@@ -157,3 +157,50 @@ btnAcc.forEach((btnaccadd) => {
     btnaccadd.classList.add("active");
   });
 });
+
+// how__tabs-btn
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".how__tabs-btn");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      // Видалення класу "active" у всіх кнопок
+      tabs.forEach((t) => t.classList.remove("active"));
+
+      // Додавання класу "active" до натиснутої кнопки
+      tab.classList.add("active");
+    });
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabButtons = document.querySelectorAll('.how__tabs-btn');
+  const tabContents = document.querySelectorAll('.how__list');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetTab = button.getAttribute('data-tabs');
+
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabContents.forEach(content => {
+        if (content.getAttribute('data-tabs') === targetTab) {
+          content.style.display = 'flex';
+        } else {
+          content.style.display = 'none';
+        }
+      });
+
+      button.classList.add('active');
+    });
+  });
+
+  const activeButton = document.querySelector('.how__tabs-btn.active');
+  if (activeButton) {
+    const initialTab = activeButton.getAttribute('data-tabs');
+    tabContents.forEach(content => {
+      content.style.display = content.getAttribute('data-tabs') === initialTab ? 'flex' : 'none';
+    });
+  }
+});
