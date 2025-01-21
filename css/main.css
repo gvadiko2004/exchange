@@ -2789,6 +2789,32 @@ input[type=number] {
   max-width: 220px;
   line-height: 125%;
 }
+.rules {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 20px;
+}
+@media (max-width: 440px) {
+  .rules {
+    font-size: 12px;
+  }
+}
+.rules a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 400;
+  font-size: 14px;
+}
+@media (max-width: 440px) {
+  .rules a {
+    font-size: 12px;
+  }
+}
+.rules a:hover {
+  opacity: 0.8;
+}
+
 .footer {
   margin-bottom: 40px;
 }

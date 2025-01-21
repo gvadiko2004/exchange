@@ -32,28 +32,28 @@
 //   }
 // }
 
-// .rules {
-//   color: #fff;
-//   font-weight: 400;
-//   font-size: 14px;
-//   margin-top: 20px;
+.rules {
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 20px;
 
-//   @media (max-width: 440px) {
-//     font-size: 12px;
-//   }
+  @media (max-width: 440px) {
+    font-size: 12px;
+  }
 
-//   a {
-//     color: #fff;
-//     text-decoration: underline;
-//     font-weight: 400;
-//     font-size: 14px;
+  a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 14px;
 
-//     @media (max-width: 440px) {
-//       font-size: 12px;
-//     }
+    @media (max-width: 440px) {
+      font-size: 12px;
+    }
 
-//     &:hover {
-//       opacity: 0.8;
-//     }
-//   }
-// }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
