@@ -2873,19 +2873,19 @@ input[type=number] {
 }
 @media (max-width: 440px) {
   .form-crypto-input input::-webkit-input-placeholder {
-    font-size: 12px;
+    font-size: 10px;
   }
   .form-crypto-input input::-moz-placeholder {
-    font-size: 12px;
+    font-size: 10px;
   }
   .form-crypto-input input:-ms-input-placeholder {
-    font-size: 12px;
+    font-size: 10px;
   }
   .form-crypto-input input::-ms-input-placeholder {
-    font-size: 12px;
+    font-size: 10px;
   }
   .form-crypto-input input::placeholder {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
