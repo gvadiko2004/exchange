@@ -427,3 +427,11 @@ input[type="number"] {
   font-size: 20px !important;
   font-weight: 500 !important;
 }
+
+@media (max-width: 440px) {
+  .currency span {
+    position: relative;
+    left: 50px;
+  }
+}
+

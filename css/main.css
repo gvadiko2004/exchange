@@ -430,6 +430,12 @@ input[type=number] {
   font-weight: 500 !important;
 }
 
+@media (max-width: 440px) {
+  .currency span {
+    position: relative;
+    left: 50px;
+  }
+}
 .header {
   padding: 40px 0;
 }
