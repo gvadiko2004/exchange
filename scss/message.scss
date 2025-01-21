@@ -41,15 +41,24 @@
     border-radius: 24px;
     padding: 40px;
     overflow: hidden;
+    position: relative;
 
     @media (max-width: 440px) {
       padding: 14px 20px 36px 20px;
+
+      padding: 24px 20px 36px 20px;
+      height: 512px;
+      overflow: hidden;
     }
   }
 
   // .message__content
 
   &__content {
+    @media (max-width: 440px) {
+      position: relative;
+      z-index: 12;
+    }
   }
 
   // .message__content-title
@@ -97,6 +106,12 @@
     @media (max-width: 1080px) {
     }
 
+    @media (max-width: 440px) {
+      position: absolute;
+    bottom: -100px;
+    opacity: 0.6;
+    }
+
     .logo-message {
       width: 240px;
       position: absolute;
@@ -139,11 +154,13 @@
       rgba(52, 52, 52, 1) 100%
     );
     opacity: 0.3;
+    border-radius: 10000px;
+    animation: blink 1.5s ease-in-out infinite, scaleUp 1.5s ease-in-out infinite;
 
     &:nth-child(1) {
       width: 350px;
       height: 350px;
-      border-radius: 10000px;
+      animation-delay: 0s;
 
       @media (max-width: 1080px) {
         width: 250px;
@@ -151,15 +168,15 @@
       }
 
       @media (max-width: 440px) {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
       }
     }
 
     &:nth-child(2) {
       width: 500px;
       height: 500px;
-      border-radius: 10000px;
+      animation-delay: 0.25s;
 
       @media (max-width: 1080px) {
         width: 350px;
@@ -167,15 +184,15 @@
       }
 
       @media (max-width: 440px) {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
       }
     }
 
     &:nth-child(3) {
       width: 650px;
       height: 650px;
-      border-radius: 10000px;
+      animation-delay: 0.5s;
 
       @media (max-width: 1080px) {
         width: 450px;
@@ -183,12 +200,33 @@
       }
 
       @media (max-width: 440px) {
-        width: 350px;
-        height: 350px;
+        width: 310px;
+        height: 310px;
       }
     }
   }
 }
+
+// Анімація мігання (зміна прозорості)
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6; // Прозорість змінюється до 0.6
+  }
+}
+
+// Анімація збільшення (scale)
+@keyframes scaleUp {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); // Збільшення на 5%
+  }
+}
+
 
 .hero__list-subtitle {
   font-size: clamp(0.75rem, 0.685rem + 0.24vw, 0.875rem);

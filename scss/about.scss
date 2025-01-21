@@ -3,6 +3,10 @@
 
   &__inner {
     margin-bottom: 80px;
+
+    @media (max-width: 440px) {
+      margin-bottom: 40px;
+    }
   }
 
   // .about__blocks
@@ -66,6 +70,10 @@
     font-size: clamp(0.813rem, 0.714rem + 0.36vw, 1rem);
     font-weight: 500;
     font-family: var(--font-unbounded);
+
+    @media (max-width: 440px) {
+      font-size: 18px;
+    }
   }
 
   // .about__blocks-subtitle

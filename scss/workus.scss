@@ -32,6 +32,10 @@
   &__title {
     font-size: clamp(1.25rem, 1.119rem + 0.48vw, 1.5rem);
     font-weight: 900;
+
+    @media (max-width: 440px) {
+      text-align: center;
+    }
   }
 
   // .workus__blocks

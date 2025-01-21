@@ -65,3 +65,62 @@ menuBtn.addEventListener("click", () => {
     document.body.style.overflow = "";
   }
 });
+
+// fag__accordeon-item
+
+const dropAccItem = document.querySelectorAll(".fag__accordeon-item");
+
+dropAccItem.forEach((dropItem) => {
+  dropItem.addEventListener("click", function () {
+    const subtitle = dropItem.querySelector(".fag__accordeon-subtitle");
+    const iconDown = dropItem.querySelector(".icon-acc");
+
+    // Проверка, если текущий элемент уже активен
+    if (subtitle.classList.contains("active")) {
+      // Если активен, сбрасываем класс
+      subtitle.classList.remove("active");
+      iconDown.classList.remove("active");
+    } else {
+      // Если не активен, сбрасываем классы у всех элементов
+      dropAccItem.forEach((removeAcc) => {
+        const removeSubtitle = removeAcc.querySelector(
+          ".fag__accordeon-subtitle"
+        );
+        const removeIconDown = removeAcc.querySelector(".icon-acc");
+        removeSubtitle.classList.remove("active");
+        removeIconDown.classList.remove("active");
+      });
+
+      // Добавляем класс active только к текущему элементу
+      subtitle.classList.add("active");
+      iconDown.classList.add("active");
+    }
+  });
+});
+
+// mobile-country-list_country
+
+const countryItem = document.querySelectorAll(".mobile-country-list_country");
+
+countryItem.forEach((itemCountry) => {
+  const contentCountryClick = itemCountry.querySelector(".mobile-country-list_content");
+  const icCountry = itemCountry.querySelector(".ic-country");
+
+  itemCountry.addEventListener("click", function () {
+    // Проверяем, если контент открыт, скрываем его и убираем поворот
+    if (contentCountryClick.style.display === 'flex') {
+      contentCountryClick.style.display = 'none';
+      icCountry.style.transform = 'rotate(0deg)'; // Убираем поворот
+    } else {
+      // Закрываем все другие контенты и открываем текущий
+      countryItem.forEach((otherItemCountry) => {
+        const otherContent = otherItemCountry.querySelector(".mobile-country-list_content");
+        otherContent.style.display = 'none'; // Закрыть все другие
+        const otherIcCountry = otherItemCountry.querySelector(".ic-country");
+        otherIcCountry.style.transform = 'rotate(0deg)'; // Убираем поворот у других
+      });
+      contentCountryClick.style.display = 'flex'; // Открыть текущий
+      icCountry.style.transform = 'rotate(180deg)'; // Поворот на 180 градусов
+    }
+  });
+});

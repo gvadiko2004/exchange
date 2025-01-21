@@ -84,7 +84,7 @@ async function updateCryptoList() {
     }
   });
 
-  currencyInputPut.value = "100";
+  currencyInputPut.value = "300";
   currencyInputPut.dispatchEvent(new Event("input"));
 }
 
@@ -187,3 +187,22 @@ if (changeSellContainer) {
 
   document.addEventListener("DOMContentLoaded", updateCryptoSellList);
 }
+
+window.addEventListener("load", () => {
+  let value = 0;
+  const targetValue = 300;
+  const duration = 1500; // время анимации в миллисекундах
+  const stepTime = 10; // шаг анимации
+
+  const increment = targetValue / (duration / stepTime);
+
+  const interval = setInterval(() => {
+    value += increment;
+    if (value >= targetValue) {
+      clearInterval(interval);
+      value = targetValue;
+    }
+    currencyInputPut.value = value.toFixed(0);
+    currencyInputPut.dispatchEvent(new Event("input"));
+  }, stepTime);
+});

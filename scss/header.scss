@@ -6,14 +6,24 @@
   }
 
   .icon__logo-title {
-    display: none;
+    @media (max-width: 440px) {
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 
   .icon__logo-slogan {
-    display: none;
+    @media (max-width: 440px) {
+      font-size: 8px;
+      font-weight: 400;
+    }
   }
 
   .icon-logo {
+    @media (max-width: 440px) {
+      gap: 10px;
+    }
+
     img {
       @media (max-width: 440px) {
         width: 40px;
@@ -37,6 +47,11 @@
       gap: 8px;
 
       align-items: flex-start;
+
+      @media (max-width: 440px) {
+        gap: 4px;
+
+      }
     }
   }
 
@@ -68,8 +83,10 @@
       display: none;
 
       @media (max-width: 440px) {
-        height: 21%;
-        top: 70px;
+        height: 250px;
+        top: 60px;
+        gap: 12px;
+        justify-content: center;
       }
 
       &.active {
@@ -177,5 +194,13 @@
 .header__btn.header__btn-ph {
   @media (max-width: 1080px) {
     display: block !important;
+  }
+}
+
+.header__btn.header__btn-ph {
+  display: none;
+
+  @media (max-width: 1080px) {
+    display: block;
   }
 }

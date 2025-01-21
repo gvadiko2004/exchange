@@ -1,0 +1,897 @@
+.btn,
+.location.container .locations-buttons button.active {
+  background: 0 0;
+  border: none;
+  border-radius: 66px;
+  cursor: pointer;
+}
+.btn .btn-title,
+.location.container .locations-buttons button.active .btn-title {
+  color: #fff;
+  font-family: CeraPro, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1250px) {
+  .btn .btn-title,
+  .location.container .locations-buttons button.active .btn-title {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.btn .btn-title.dark,
+.location.container .locations-buttons button.active .btn-title.dark {
+  color: #141414;
+}
+.btn.btn-orange,
+.location.container .locations-buttons button.active {
+  background: linear-gradient(87.69deg, #ff7f0a 1.93%, #ffc359 100.98%);
+}
+.btn.btn-gray,
+.location.container .locations-buttons button.btn-gray.active {
+  background: #6c7275;
+}
+.checkbox {
+  position: relative;
+}
+
+.location.container .locations-buttons .modal-wrapper button.active:not(.title),
+.modal-wrapper .btn:not(.title),
+.modal-wrapper
+  .location.container
+  .locations-buttons
+  button.active:not(.title) {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+.location.container .locations-buttons .modal-wrapper button.active:not(.title),
+.modal-wrapper .btn:not(.title).btn-gray,
+.modal-wrapper .btn:not(.title).btn-orange,
+.modal-wrapper
+  .location.container
+  .locations-buttons
+  button.active:not(.title) {
+  margin-top: 53px;
+}
+
+.location.container {
+  align-items: center;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 64px 77px 48px 76px;
+}
+@media (max-width: 1250px) {
+  .location.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 40px 20px;
+    width: calc(100% - 40px);
+  }
+}
+.location.container .mobile-country-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.location.container .mobile-country-list * {
+  transition: 0.3s;
+}
+.location.container .mobile-country-list_wrapper {
+  width: 100%;
+}
+.location.container .mobile-country-list_country {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 20px;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+.location.container
+  .mobile-country-list_country.isSelected
+  .mobile-country-list_content {
+  display: block;
+}
+.location.container .mobile-country-list_country:last-child:before {
+  content: normal;
+}
+.location.container .mobile-country-list_country:before {
+  border-left: 1px dashed #6c7275;
+  content: "";
+  height: 100%;
+  left: 3px;
+  opacity: 0.65;
+  position: absolute;
+  top: 16px;
+  width: 1px;
+}
+.location.container .mobile-country-list_countryName {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.location.container .mobile-country-list_countryName_text {
+  align-items: center;
+  display: flex;
+  font-family: CeraPro, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  gap: 12px;
+}
+.location.container .mobile-country-list_content {
+  display: none;
+  padding: 0 0 0 20px;
+  position: relative;
+  flex-direction: column;
+}
+.location.container .mobile-country-list_content_city {
+  display: flex;
+  gap: 16px;
+}
+.location.container .mobile-country-list_content_item {
+  flex: 1 1 calc(50% - 16px);
+  margin-top: 24px;
+}
+.location.container
+  .mobile-country-list_content_item
+  > .mobile-country-list_content_item_text {
+  -webkit-text-fill-color: #141414;
+  align-items: center;
+  color: #141414;
+  display: flex;
+  font-family: CeraPro, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 3px;
+  line-height: 16.8px;
+  padding: 0;
+}
+.location.container
+  .mobile-country-list_content_item
+  > .mobile-country-list_content_item_text
+  svg {
+  -webkit-text-fill-color: unset;
+}
+.location.container .mobile-country-list_content_item > div {
+  -webkit-text-fill-color: #141414;
+  color: #141414;
+  font-family: CeraPro, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 0 0 0 20px;
+}
+.location.container .mobile-country-list_content_item > div svg {
+  -webkit-text-fill-color: unset;
+}
+.location.container .mobile-country-list_content_map {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.location.container .mobile-country-list_content_map > svg {
+  width: 100%;
+}
+.location.container .title {
+  color: #141414;
+  font-family: CeraPro, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+}
+@media (max-width: 767px) {
+  .location.container .title {
+    font-size: 30px;
+    line-height: 39px;
+  }
+}
+.location.container .locations-buttons {
+  display: flex;
+  gap: 29px;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  margin-top: 36px;
+  position: relative;
+}
+@media (max-width: 1250px) {
+  .location.container .locations-buttons {
+    flex-wrap: wrap;
+    gap: 11px;
+    width: 100%;
+  }
+}
+.location.container .locations-buttons:before {
+  background: #fff;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 223px;
+  width: 100%;
+}
+@media (max-width: 1250px) {
+  .location.container .locations-buttons:before {
+    content: normal;
+  }
+}
+.location.container .locations-buttons button {
+  background: #fff;
+  border: none;
+  border-radius: 66px;
+  cursor: pointer;
+  padding-bottom: 22px;
+  padding-top: 22px;
+  width: 288px;
+}
+@media (max-width: 1250px) {
+  .location.container .locations-buttons button {
+    flex: 1 1 calc(50% - 11px);
+    width: 50%;
+  }
+}
+.location.container .locations-buttons button .btn-title {
+  color: #141414;
+  font-family: CeraPro, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.location.container .locations-buttons button.active {
+  padding: 20px 0 !important;
+}
+.location.container .locations-buttons button.active .btn-title {
+  color: #fff;
+}
+.location.container .country-list {
+  background: 0 0;
+  border-radius: 0;
+  display: flex;
+  gap: 53px;
+  height: 108px;
+  justify-content: center;
+  margin-bottom: 46px;
+  padding: 0;
+  position: relative;
+}
+.location.container .country {
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: all 0.3s;
+  width: 108px;
+}
+.location.container .country.isSelected:after {
+  background: linear-gradient(87.69deg, #ff7f0a 1.93%, #ffc359 100.98%);
+  bottom: 0;
+  content: "";
+  height: 4px;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+}
+.location.container .country-name {
+  color: #141414;
+  font-family: CeraPro, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 22px;
+  transition: all 0.3s;
+}
+.location.container .city-name {
+  color: #6c7275;
+  font-family: CeraPro, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.location.container .maps {
+  margin-bottom: 60px;
+}
+.location.container .location-text {
+  color: #141414;
+  display: flex;
+  font-family: CeraPro, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 24px;
+  max-width: 430px;
+  text-align: center;
+}
+.location.container .btn-orange,
+.location.container .locations-buttons button.active {
+  padding: 20px 65px;
+}
+.location-map-container {
+  position: relative;
+}
+.location-map-container__city {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.location-map-container__address {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 16px;
+}
+.location-map-container__address,
+.location-map-container__title {
+  color: #fff;
+  font-family: CeraPro, sans-serif;
+  letter-spacing: 0;
+  text-align: left;
+}
+.location-map-container__title {
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  gap: 8px;
+  line-height: 19px;
+  white-space: nowrap;
+}
+.location-map-container .asiaMap_Cyprus,
+.location-map-container .asiaMap_Indonesia,
+.location-map-container .asiaMap_Kazakhstan,
+.location-map-container .asiaMap_Thailand,
+.location-map-container .asiaMap_Turkey,
+.location-map-container .asiaMap_UAE,
+.location-map-container .europeMap_France,
+.location-map-container .europeMap_Germany,
+.location-map-container .europeMap_Poland,
+.location-map-container .europeMap_Portugal,
+.location-map-container .europeMap_Spain,
+.location-map-container .europeMap_Ukraine,
+.location-map-container .latinMap_Argentina,
+.location-map-container .latinMap_Brazil,
+.location-map-container .latinMap_Colombia,
+.location-map-container .latinMap_Mexico,
+.location-map-container .usaMap_California,
+.location-map-container .usaMap_Florida,
+.location-map-container .usaMap_NewYork {
+  cursor: default;
+  position: absolute;
+}
+.location-map-container .asiaMap_Cyprus p,
+.location-map-container .asiaMap_Indonesia p,
+.location-map-container .asiaMap_Kazakhstan p,
+.location-map-container .asiaMap_Thailand p,
+.location-map-container .asiaMap_Turkey p,
+.location-map-container .asiaMap_UAE p,
+.location-map-container .europeMap_France p,
+.location-map-container .europeMap_Germany p,
+.location-map-container .europeMap_Poland p,
+.location-map-container .europeMap_Portugal p,
+.location-map-container .europeMap_Spain p,
+.location-map-container .europeMap_Ukraine p,
+.location-map-container .latinMap_Argentina p,
+.location-map-container .latinMap_Brazil p,
+.location-map-container .latinMap_Colombia p,
+.location-map-container .latinMap_Mexico p,
+.location-map-container .usaMap_California p,
+.location-map-container .usaMap_Florida p,
+.location-map-container .usaMap_NewYork p {
+  color: #6c7275;
+  font-family: CeraPro, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  position: absolute;
+}
+.location-map-container .asiaMap_Cyprus.active p,
+.location-map-container .asiaMap_Cyprus:hover p,
+.location-map-container .asiaMap_Indonesia.active p,
+.location-map-container .asiaMap_Indonesia:hover p,
+.location-map-container .asiaMap_Kazakhstan.active p,
+.location-map-container .asiaMap_Kazakhstan:hover p,
+.location-map-container .asiaMap_Thailand.active p,
+.location-map-container .asiaMap_Thailand:hover p,
+.location-map-container .asiaMap_Turkey.active p,
+.location-map-container .asiaMap_Turkey:hover p,
+.location-map-container .asiaMap_UAE.active p,
+.location-map-container .asiaMap_UAE:hover p,
+.location-map-container .europeMap_France.active p,
+.location-map-container .europeMap_France:hover p,
+.location-map-container .europeMap_Germany.active p,
+.location-map-container .europeMap_Germany:hover p,
+.location-map-container .europeMap_Poland.active p,
+.location-map-container .europeMap_Poland:hover p,
+.location-map-container .europeMap_Portugal.active p,
+.location-map-container .europeMap_Portugal:hover p,
+.location-map-container .europeMap_Spain.active p,
+.location-map-container .europeMap_Spain:hover p,
+.location-map-container .europeMap_Ukraine.active p,
+.location-map-container .europeMap_Ukraine:hover p,
+.location-map-container .latinMap_Argentina.active p,
+.location-map-container .latinMap_Argentina:hover p,
+.location-map-container .latinMap_Brazil.active p,
+.location-map-container .latinMap_Brazil:hover p,
+.location-map-container .latinMap_Colombia.active p,
+.location-map-container .latinMap_Colombia:hover p,
+.location-map-container .latinMap_Mexico.active p,
+.location-map-container .latinMap_Mexico:hover p,
+.location-map-container .usaMap_California.active p,
+.location-map-container .usaMap_California:hover p,
+.location-map-container .usaMap_Florida.active p,
+.location-map-container .usaMap_Florida:hover p,
+.location-map-container .usaMap_NewYork.active p,
+.location-map-container .usaMap_NewYork:hover p {
+  color: #141414;
+  font-weight: 700;
+}
+.location-map-container .europeMap_Portugal {
+  bottom: 35px;
+  left: 20px;
+}
+.location-map-container .europeMap_Portugal_name {
+  bottom: -35px;
+  left: 0;
+}
+.location-map-container .europeMap_Portugal.active svg path:first-child,
+.location-map-container .europeMap_Portugal:hover svg path:first-child {
+  fill: url(index.html#gradient_portugal);
+}
+.location-map-container .europeMap_Spain {
+  bottom: 75px;
+  left: 70px;
+}
+.location-map-container .europeMap_Spain_name {
+  left: 30px;
+  top: -40px;
+}
+.location-map-container .europeMap_Spain.active svg path:first-child,
+.location-map-container .europeMap_Spain:hover svg path:first-child {
+  fill: url(index.html#gradient_spain);
+}
+.location-map-container .europeMap_France {
+  bottom: 205px;
+  left: 175px;
+}
+.location-map-container .europeMap_France_name {
+  left: 35px;
+  top: -20px;
+}
+.location-map-container .europeMap_France.active svg path:first-child,
+.location-map-container .europeMap_France:hover svg path:first-child {
+  fill: url(index.html#gradient_french);
+}
+.location-map-container .europeMap_Germany {
+  bottom: 275px;
+  left: 460px;
+}
+.location-map-container .europeMap_Germany_name {
+  bottom: -35px;
+  left: 40px;
+}
+.location-map-container .europeMap_Germany.active svg path:first-child,
+.location-map-container .europeMap_Germany:hover svg path:first-child {
+  fill: url(index.html#gradient_germany);
+}
+.location-map-container .europeMap_Poland {
+  bottom: 265px;
+  left: 670px;
+}
+.location-map-container .europeMap_Poland_name {
+  left: 80px;
+  top: -40px;
+}
+.location-map-container .europeMap_Poland.active svg path:first-child,
+.location-map-container .europeMap_Poland:hover svg path:first-child {
+  fill: url(index.html#gradient_poland);
+}
+.location-map-container .europeMap_Ukraine {
+  bottom: 95px;
+  left: 850px;
+}
+.location-map-container .europeMap_Ukraine_name {
+  left: 190px;
+  top: -45px;
+}
+.location-map-container .europeMap_Ukraine.active svg path:first-child,
+.location-map-container .europeMap_Ukraine:hover svg path:first-child {
+  fill: url(index.html#gradient_ukraine);
+}
+.location-map-container .asiaMap_Cyprus {
+  bottom: 52px;
+  left: 20px;
+}
+.location-map-container .asiaMap_Cyprus_name {
+  left: 15px;
+  top: -35px;
+}
+.location-map-container .asiaMap_Cyprus.active svg path:first-child,
+.location-map-container .asiaMap_Cyprus:hover svg path:first-child {
+  fill: #fc9401;
+}
+.location-map-container .asiaMap_Turkey {
+  bottom: 130px;
+  left: 75px;
+}
+.location-map-container .asiaMap_Turkey_name {
+  left: 85px;
+  top: -40px;
+}
+.location-map-container .asiaMap_Turkey.active svg path:first-child,
+.location-map-container .asiaMap_Turkey:hover svg path:first-child {
+  fill: url(index.html#gradient_turkey);
+}
+.location-map-container .asiaMap_UAE {
+  bottom: 160px;
+  left: 270px;
+}
+.location-map-container .asiaMap_UAE_name {
+  left: 0;
+  top: -20px;
+}
+.location-map-container .asiaMap_UAE.active svg path:first-child,
+.location-map-container .asiaMap_UAE:hover svg path:first-child {
+  fill: url(index.html#gradient_uae);
+}
+.location-map-container .asiaMap_Kazakhstan {
+  bottom: 165px;
+  left: 345px;
+}
+.location-map-container .asiaMap_Kazakhstan_name {
+  left: 215px;
+  top: -40px;
+}
+.location-map-container .asiaMap_Kazakhstan.active svg path:first-child,
+.location-map-container .asiaMap_Kazakhstan:hover svg path:first-child {
+  fill: url(index.html#gradient_kazakhstan);
+}
+.location-map-container .asiaMap_Thailand {
+  bottom: 45px;
+  left: 710px;
+}
+.location-map-container .asiaMap_Thailand_name {
+  left: 60px;
+  top: -20px;
+}
+.location-map-container .asiaMap_Thailand.active svg path:first-child,
+.location-map-container .asiaMap_Thailand:hover svg path:first-child {
+  fill: url(index.html#gradient_thailand);
+}
+.location-map-container .asiaMap_Indonesia {
+  bottom: 0;
+  left: 840px;
+}
+.location-map-container .asiaMap_Indonesia_name {
+  left: 210px;
+  top: -10px;
+}
+.location-map-container .asiaMap_Indonesia.active svg path:first-child,
+.location-map-container .asiaMap_Indonesia:hover svg path:first-child {
+  fill: url(index.html#gradient_indonesia);
+}
+.location-map-container .latinMap_Mexico {
+  bottom: 230px;
+  left: 0;
+}
+.location-map-container .latinMap_Mexico_name {
+  left: 105px;
+  top: -7px;
+}
+.location-map-container .latinMap_Mexico.active svg path:first-child,
+.location-map-container .latinMap_Mexico:hover svg path:first-child {
+  fill: url(index.html#gradient_mexico);
+}
+.location-map-container .latinMap_Colombia {
+  bottom: 133px;
+  left: 210px;
+}
+.location-map-container .latinMap_Colombia_name {
+  left: -15px;
+  top: 113px;
+}
+.location-map-container .latinMap_Colombia.active svg path:first-child,
+.location-map-container .latinMap_Colombia:hover svg path:first-child {
+  fill: url(index.html#gradient_colombia);
+}
+.location-map-container .latinMap_Argentina {
+  bottom: 0;
+  left: 365px;
+}
+.location-map-container .latinMap_Argentina_name {
+  left: 135px;
+  top: -23px;
+}
+.location-map-container .latinMap_Argentina.active svg path:first-child,
+.location-map-container .latinMap_Argentina:hover svg path:first-child {
+  fill: url(index.html#gradient_argentina);
+}
+.location-map-container .latinMap_Brazil {
+  bottom: 105px;
+  left: 735px;
+}
+.location-map-container .latinMap_Brazil_name {
+  left: 115px;
+  top: -35px;
+}
+.location-map-container .latinMap_Brazil.active svg path:first-child,
+.location-map-container .latinMap_Brazil:hover svg path:first-child {
+  fill: url(index.html#gradient_brazil);
+}
+.location-map-container .usaMap_California {
+  bottom: 45px;
+  left: 308px;
+}
+.location-map-container .usaMap_California_name {
+  left: -6px;
+  top: 17px;
+}
+.location-map-container .usaMap_Florida {
+  bottom: 26px;
+  left: 523px;
+}
+.location-map-container .usaMap_Florida_name {
+  left: 15px;
+  top: 38px;
+}
+.location-map-container .usaMap_NewYork {
+  bottom: 134px;
+  left: 550px;
+}
+.location-map-container .usaMap_NewYork_name {
+  left: 15px;
+  top: -23px;
+}
+
+.container.faq .btn.btn-orange,
+.container.faq .location.container .locations-buttons button.active,
+.location.container .locations-buttons .container.faq button.active {
+  margin-top: 12px;
+  max-width: 288px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.location.container .locations-buttons .profile-settings__item button.active,
+.profile-settings__item .btn-orange,
+.profile-settings__item .location.container .locations-buttons button.active {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+.profile-settings__title {
+  color: #fff;
+  font-family: CeraPro, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 36px;
+  margin-top: 20px;
+}
+
+.get-money-modal .modals-block-btns .btn-orange,
+.get-money-modal
+  .modals-block-btns
+  .location.container
+  .locations-buttons
+  button.active,
+.location.container
+  .locations-buttons
+  .get-money-modal
+  .modals-block-btns
+  button.active {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.location.container
+  .locations-buttons
+  .modal-mask.about-partner-system
+  button.active,
+.modal-mask.about-partner-system .btn-orange,
+.modal-mask.about-partner-system
+  .location.container
+  .locations-buttons
+  button.active {
+  max-width: 150px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+.modal-mask.discount .modal-body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.modal-mask.discount .about_description {
+  color: #fff;
+  font-family: CeraPro, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: justify;
+}
+.location.container .locations-buttons .modal-mask.discount button.active,
+.modal-mask.discount .btn-orange,
+.modal-mask.discount .location.container .locations-buttons button.active {
+  max-width: 150px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.deposit-modal .btn-orange,
+.deposit-modal .location.container .locations-buttons button.active,
+.location.container .locations-buttons .deposit-modal button.active {
+  margin-top: 48px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.api-block table .delete .btn,
+.api-block table .delete .location.container .locations-buttons button.active,
+.location.container .locations-buttons .api-block table .delete button.active {
+  background: 0 0;
+  border: none;
+}
+
+.location.container
+  .locations-buttons
+  .order-main-block
+  .form-v2--input-order-form-btn
+  button.active,
+.order-main-block .form-v2--input-order-form-btn .btn,
+.order-main-block
+  .form-v2--input-order-form-btn
+  .location.container
+  .locations-buttons
+  button.active {
+  max-width: 228px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .location.container
+    .locations-buttons
+    .order-main-block
+    .form-v2--input-order-form-btn
+    button.active,
+  .order-main-block .form-v2--input-order-form-btn .btn,
+  .order-main-block
+    .form-v2--input-order-form-btn
+    .location.container
+    .locations-buttons
+    button.active {
+    max-width: 288px;
+  }
+}
+
+.location.container
+  .locations-buttons
+  button.modal-default-button.contact-me-modal.active,
+.modal-default-button.btn.btn-orange.contact-me-modal {
+  margin-top: 36px;
+}
+@media screen and (max-width: 767px) {
+  .location.container
+    .locations-buttons
+    button.modal-default-button.contact-me-modal.active,
+  .modal-default-button.btn.btn-orange.contact-me-modal {
+    margin-top: 20px;
+  }
+}
+.location.container
+  .locations-buttons
+  button.modal-default-button.contact-me-modal.small-margin.active,
+.modal-default-button.btn.btn-orange.contact-me-modal.small-margin {
+  margin-top: 16px;
+}
+@media screen and (max-width: 767px) {
+  .location.container
+    .locations-buttons
+    button.modal-default-button.contact-me-modal.small-margin.active,
+  .modal-default-button.btn.btn-orange.contact-me-modal.small-margin {
+    margin-top: 8px;
+  }
+}
+
+.location.container .locations-buttons .page-404 button.active,
+.page-404 .btn-orange,
+.page-404 .location.container .locations-buttons button.active {
+  max-width: 288px;
+  width: 100%;
+}
+.location.container .locations-buttons .page-404 button.active .btn-title,
+.page-404 .btn-orange .btn-title,
+.page-404 .location.container .locations-buttons button.active .btn-title {
+  display: inline-block;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.four.four-second .container.text-center .btn-orange,
+.four.four-second
+  .container.text-center
+  .location.container
+  .locations-buttons
+  button.active,
+.location.container
+  .locations-buttons
+  .four.four-second
+  .container.text-center
+  button.active {
+  margin: 16px auto 0;
+  max-width: 288px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+.four.four-second .container.text-center .btn-orange .btn-title,
+.four.four-second
+  .container.text-center
+  .location.container
+  .locations-buttons
+  button.active
+  .btn-title,
+.location.container
+  .locations-buttons
+  .four.four-second
+  .container.text-center
+  button.active
+  .btn-title {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-country-list_content_map {
+  width: 220px;
+  display: block;
+  margin: 0 auto;
+}
+
+.mobile-country-list_content_item_text {
+  display: block;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 440px) {
+  .location.container {
+    padding: 40px 0 40px 0;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .location.container .mobile-country-list_countryName_text {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+  }
+
+  .location.container .location-text {
+    font-weight: 400 !important;
+    font-size: 10px !important;
+    margin-top: 10px;
+  }
+
+  .location.container
+    .mobile-country-list_content_item
+    > .mobile-country-list_content_item_text {
+    font-weight: 400 !important;
+    font-size: 12px !important;
+  }
+}
