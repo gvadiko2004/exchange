@@ -264,6 +264,10 @@
     column-gap: 20px;
   }
 
+  @media (max-width: 440px) {
+    order: -1;
+  }
+
   .pay-info-currencys-valut {
     font-size: 14px;
     font-weight: 300;

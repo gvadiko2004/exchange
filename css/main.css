@@ -3094,6 +3094,13 @@ input[type=number] {
             column-gap: 20px;
   }
 }
+@media (max-width: 440px) {
+  .pay-info-currencys {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
 .pay-info-currencys .pay-info-currencys-valut {
   font-size: 14px;
   font-weight: 300;
