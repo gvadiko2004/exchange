@@ -769,7 +769,7 @@ input[type=number] {
 }
 @media (max-width: 440px) {
   .hero__select-item {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -793,6 +793,12 @@ input[type=number] {
   pointer-events: none;
   visibility: hidden;
   z-index: 100;
+}
+@media (max-width: 440px) {
+  .hero__dropdown {
+    width: 200px !important;
+    max-height: 189px !important;
+  }
 }
 .hero__dropdown.active {
   -webkit-transform: translateY(0);
@@ -938,6 +944,12 @@ input[type=number] {
   bottom: 2px;
   font-size: clamp(0.75rem, 0.685rem + 0.24vw, 0.875rem);
 }
+@media (max-width: 440px) {
+  .hero__dropdown-cur {
+    font-size: 10px;
+    position: relative;
+  }
+}
 
 .hero__dropdown {
   width: 300px;
@@ -994,6 +1006,11 @@ input[type=number] {
 
 .hero__dropdown-sell {
   z-index: 100;
+}
+@media (max-width: 1080px) {
+  .hero__dropdown-sell {
+    max-height: 282px;
+  }
 }
 
 .hero__content.hero__content-ph {
@@ -1071,6 +1088,18 @@ input[type=number] {
 @media (max-width: 440px) {
   .btn-open img {
     width: 26px;
+  }
+}
+
+.currency span {
+  max-width: 42px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}
+@media (max-width: 440px) {
+  .currency span {
+    max-width: 35px;
   }
 }
 

@@ -333,7 +333,7 @@
   white-space: nowrap;
 
   @media (max-width: 440px) {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -354,6 +354,11 @@
   visibility: hidden;
 
   z-index: 100;
+
+  @media (max-width: 440px) {
+    width: 200px !important;
+    max-height: 189px !important;
+  }
 
   &.active {
     transform: translateY(0);
@@ -414,7 +419,6 @@
 
 .svg-icon.active {
   transform: rotate(180deg);
- 
 }
 
 .svg-icon {
@@ -472,6 +476,11 @@
   position: relative;
   bottom: 2px;
   font-size: clamp(0.75rem, 0.685rem + 0.24vw, 0.875rem);
+
+  @media (max-width: 440px) {
+    font-size: 10px;
+    position: relative;
+  }
 }
 
 .hero__dropdown {
@@ -525,6 +534,10 @@
 
 .hero__dropdown-sell {
   z-index: 100;
+
+  @media (max-width: 1080px) {
+    max-height: 282px;
+  }
 }
 
 .hero__content.hero__content-ph {
@@ -595,5 +608,16 @@
     @media (max-width: 440px) {
       width: 26px;
     }
+  }
+}
+
+.currency span {
+  max-width: 42px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+
+  @media (max-width: 440px) {
+    max-width: 35px;
   }
 }
