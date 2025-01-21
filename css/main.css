@@ -2960,6 +2960,11 @@ input[type=number] {
 .pay-found__form {
   margin-top: 30px;
 }
+@media (max-width: 440px) {
+  .pay-found__form {
+    margin-top: 12px;
+  }
+}
 .pay-found__form img {
   border-radius: 100px;
   display: block;
@@ -3099,6 +3104,13 @@ input[type=number] {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 .pay-info-currencys .pay-info-currencys-valut {
