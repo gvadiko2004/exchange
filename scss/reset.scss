@@ -438,3 +438,10 @@ input[type="number"] {
     left: 40px;
   }
 }
+
+.pay-info-currencys-valut-span {
+  @media (max-width: 440px) {
+    margin-top: 4px;
+    display: block;
+  }
+}

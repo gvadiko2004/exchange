@@ -132,26 +132,29 @@
                       <span class="currency-sep"> Вы платите: </span>
 
                       <div class="pay-input">
-                        <img width="32" src="images/trc20.png" alt="" />
-                        <span>Tether TRC20 USDT </span>
+                        <img class="pay-input-card" width="32" src="" alt="" />
+                        <span class="pay-input-crypto"> </span>
                       </div>
 
                       <div class="pay-input pay-input-currency">
-                        <span class="data-user-input">1000</span>
+                        <span class="data-user-input data-user-input-put"></span>
                         <span class="data-user-currency">USDT</span>
                       </div>
 
                       <div class="pay-info-currencys">
                         <h4 class="pay-info-currencys-valut">
-                          Курс валюты: <span>103.3 RUB</span>
+                          Курс валюты:<br />
+                          <span class="pay-info-currencys-valut-span"></span>
                         </h4>
 
                         <h4 class="pay-info-currencys-valut">
-                          Минимум: <span>300.00 USDT</span>
+                          Минимум:<br />
+                          <span>300.00 USDT</span>
                         </h4>
 
                         <h4 class="pay-info-currencys-valut">
-                          Максисум: <span>122 000.00 USDT</span>
+                          Максисум:<br />
+                          <span>122 000.00 USDT</span>
                         </h4>
                       </div>
                     </div>
@@ -160,12 +163,12 @@
                       <span class="currency-sep"> Вы получаете: </span>
 
                       <div class="pay-input">
-                        <img width="32" src="images/b6.png" alt="" />
-                        <span>Тинькофф RUB </span>
+                        <img class="pay-input-bank" width="32" src="" alt="" />
+                        <span class="currency-sep-bank"> </span>
                       </div>
 
                       <div class="pay-input pay-input-currency">
-                        <span class="data-user-input">1000</span>
+                        <span class="data-user-input data-user-input-sell"></span>
                         <span class="data-user-currency">RUB</span>
                       </div>
                     </div>
@@ -423,5 +426,29 @@
     <script defer src="./js/crypto.js"></script>
     <script defer src="./js/swiper.js"></script>
     <script defer src="./js/swiper-min.js"></script>
+
+    <script>
+  window.addEventListener("DOMContentLoaded", function () {
+    // Отримуємо з localStorage збережені значення
+    const price = localStorage.getItem("cryptoPrice");
+    const selectedCurrency = localStorage.getItem("selectedCurrency");
+    const imagePath = localStorage.getItem("imagePath");
+    const userInputPut = localStorage.getItem("userInputPut");
+    const userInputSell = localStorage.getItem("userInputSell");
+    const imagePathBank = localStorage.getItem("imagePathBank");
+    const selectedSellCurrency = localStorage.getItem("selectedSellCurrency");
+
+    // Вставляємо отримані значення в відповідні елементи, якщо вони є
+    if (price) document.querySelector(".pay-info-currencys-valut-span").textContent = price;
+    if (selectedCurrency) document.querySelector(".pay-input-crypto").textContent = selectedCurrency;
+    if (imagePath) document.querySelector(".pay-input-card").setAttribute("src", imagePath);
+    if (userInputPut) document.querySelector(".data-user-input-put").textContent = userInputPut;
+    if (userInputSell) document.querySelector(".data-user-input-sell").textContent = userInputSell;
+    if (imagePathBank) document.querySelector(".pay-input-bank").setAttribute("src", imagePathBank);
+    if (selectedSellCurrency) document.querySelector(".currency-sep-bank").textContent = selectedSellCurrency;
+});
+
+
+    </script>
   </body>
 </html>
