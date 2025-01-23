@@ -1,0 +1,61 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #eeeeee;
+
+  transition: 1s ease-in-out;
+
+  &.active {
+    transform: translateY(-100%);
+  }
+}
+.icon-preloader {
+  animation: logopreloader 3s ease-in-out infinite;
+  width: 80px;
+}
+
+@keyframes logopreloader {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  25% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  75% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.wrapper {
+  opacity: 0;
+
+  transition: 0.6s ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+}

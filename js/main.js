@@ -153,7 +153,7 @@ btnAcc.forEach((btnaccadd) => {
     btnAcc.forEach((btn) => {
       btn.classList.remove("active");
     });
-    
+
     btnaccadd.classList.add("active");
   });
 });
@@ -174,33 +174,46 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".how__tabs-btn");
+  const tabContents = document.querySelectorAll(".how__list");
 
-document.addEventListener('DOMContentLoaded', () => {
-  const tabButtons = document.querySelectorAll('.how__tabs-btn');
-  const tabContents = document.querySelectorAll('.how__list');
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetTab = button.getAttribute("data-tabs");
 
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetTab = button.getAttribute('data-tabs');
-
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      tabContents.forEach(content => {
-        if (content.getAttribute('data-tabs') === targetTab) {
-          content.style.display = 'flex';
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      tabContents.forEach((content) => {
+        if (content.getAttribute("data-tabs") === targetTab) {
+          content.style.display = "flex";
         } else {
-          content.style.display = 'none';
+          content.style.display = "none";
         }
       });
 
-      button.classList.add('active');
+      button.classList.add("active");
     });
   });
 
-  const activeButton = document.querySelector('.how__tabs-btn.active');
+  const activeButton = document.querySelector(".how__tabs-btn.active");
   if (activeButton) {
-    const initialTab = activeButton.getAttribute('data-tabs');
-    tabContents.forEach(content => {
-      content.style.display = content.getAttribute('data-tabs') === initialTab ? 'flex' : 'none';
+    const initialTab = activeButton.getAttribute("data-tabs");
+    tabContents.forEach((content) => {
+      content.style.display =
+        content.getAttribute("data-tabs") === initialTab ? "flex" : "none";
     });
   }
+});
+
+// preloader
+
+const preloader = document.querySelector(".preloader");
+const wrapper = document.querySelector(".wrapper");
+
+window.addEventListener("load", function () {
+  preloader.classList.add("active");
+
+  setTimeout(() => {
+    wrapper.classList.add("active");
+  }, 700);
 });
