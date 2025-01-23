@@ -448,6 +448,11 @@ input[type=number] {
   }
 }
 
+.wrapper.active {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
 .header {
   padding: 40px 0;
 }

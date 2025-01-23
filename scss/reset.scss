@@ -445,3 +445,9 @@ input[type="number"] {
     display: block;
   }
 }
+
+.wrapper {
+  &.active {
+    filter: blur(10px);
+  }
+}

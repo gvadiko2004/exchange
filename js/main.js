@@ -137,11 +137,18 @@ const btnOpenSign = document.querySelectorAll(".header__btn");
 btnOpenSign.forEach((btnOpenForm) => {
   btnOpenForm.addEventListener("click", function () {
     formUser.classList.add("active");
+
+    document.querySelector(".wrapper").classList.add("active");
+    document.body.style.overflow = 'hidden';
   });
 });
 
 btnCloseSign.addEventListener("click", function () {
   formUser.classList.remove("active");
+
+  document.querySelector(".wrapper").classList.remove("active");
+  document.body.style.overflow = 'visible';
+
 });
 
 // user__form-accbtn
@@ -204,4 +211,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-

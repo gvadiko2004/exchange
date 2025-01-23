@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/swiper.css" />
     <link rel="stylesheet" href="./css/swiper-min.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/preloader.css" />
+    <!-- <link rel="stylesheet" href="./css/preloader.css" /> -->
 
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
   </head>
@@ -4225,78 +4225,6 @@
         </section>
       </main>
 
-      <div class="user__form">
-        <div class="user__form-acc">
-          <button class="btn-reset user__form-accbtn active">Войти</button>
-          <button class="btn-reset user__form-accbtn">Регистрация</button>
-        </div>
-
-        <div class="btn-close">
-          <svg
-            class="w-6 h-6 text-gray-800 dark:text-white"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18 17.94 6M18 18 6.06 6"
-            />
-          </svg>
-        </div>
-
-        <form action="" class="user__form-inputs log-in">
-          <div class="user__form-content">
-            <span class="user__form-subtitle">E-mail</span>
-            <input
-              type="email"
-              placeholder="example@gmail.com"
-              class="user__form-input input-reset"
-            />
-          </div>
-
-          <div class="user__form-content">
-            <span class="user__form-subtitle">Пароль</span>
-            <input
-              type="password"
-              placeholder="*********"
-              class="user__form-input input-reset"
-            />
-          </div>
-
-          <div class="user__form-action">
-            <label class="btn-save-me">
-              <input type="checkbox" />
-              <span>Запомнить меня</span>
-            </label>
-
-            <button class="btn-reset btn-forgot-pass">
-              Восстановить пароль
-            </button>
-          </div>
-
-          <button type="submit" class="btn-reset form__btn">Войти</button>
-
-          <div class="sign-in-help">
-            <span>Войти с помощью</span>
-
-            <ul class="list-reset">
-              <li>
-                <a href="#!">
-                  <img src="./images/google.svg" alt="" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </form>
-      </div>
-
       <footer class="footer">
         <div class="container">
           <div class="footer__inner">
@@ -4390,8 +4318,82 @@
       </footer>
     </div>
 
-    <div class="preloader">
+    <!-- <div class="preloader">
       <img src="./images/logo.png" class="icon-preloader" alt="" />
+    </div> -->
+
+    <div class="overlay"></div>
+
+    <div class="user__form">
+      <div class="user__form-acc">
+        <button class="btn-reset user__form-accbtn active">Войти</button>
+        <button class="btn-reset user__form-accbtn">Регистрация</button>
+      </div>
+
+      <div class="btn-close">
+        <svg
+          class="w-6 h-6 text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18 17.94 6M18 18 6.06 6"
+          />
+        </svg>
+      </div>
+
+      <form action="" class="user__form-inputs log-in">
+        <div class="user__form-content">
+          <span class="user__form-subtitle">E-mail</span>
+          <input
+            type="email"
+            placeholder="example@gmail.com"
+            class="user__form-input input-reset"
+          />
+        </div>
+
+        <div class="user__form-content">
+          <span class="user__form-subtitle">Пароль</span>
+          <input
+            type="password"
+            placeholder="*********"
+            class="user__form-input input-reset"
+          />
+        </div>
+
+        <div class="user__form-action">
+          <label class="btn-save-me">
+            <input type="checkbox" />
+            <span>Запомнить меня</span>
+          </label>
+
+          <button class="btn-reset btn-forgot-pass">
+            Восстановить пароль
+          </button>
+        </div>
+
+        <button type="submit" class="btn-reset form__btn">Войти</button>
+
+        <div class="sign-in-help">
+          <span>Войти с помощью</span>
+
+          <ul class="list-reset">
+            <li>
+              <a href="#!">
+                <img src="./images/google.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </form>
     </div>
 
     <script defer src="./js/main.js"></script>
@@ -4442,7 +4444,7 @@
         });
     </script>
 
-    <script>
+    <!-- <script>
       // preloader
 
       const preloader = document.querySelector(".preloader");
@@ -4455,6 +4457,6 @@
           wrapper.classList.add("active");
         }, 700);
       });
-    </script>
+    </script> -->
   </body>
 </html>

@@ -1,6 +1,4 @@
 .user {
-  // .user__form
-
   &__form {
     position: fixed;
     left: 50%;
@@ -23,10 +21,10 @@
     }
 
     @media (max-width: 440px) {
-        border-radius: 0;
-        width: 100%;
-        height: 100%;
-      }
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
+    }
 
     &.active {
       transform: translate(-50%, -50%);
@@ -142,12 +140,7 @@
     }
   }
 }
-.log-in {
-}
-.input-reset {
-}
-.btn-reset {
-}
+
 .btn-save-me {
   display: flex;
   align-items: center;
@@ -174,12 +167,7 @@
     font-size: 11px;
   }
 }
-.header {
-  // .header__btn
 
-  &__btn {
-  }
-}
 .sign-in-help {
   text-align: center;
   color: #fff;
