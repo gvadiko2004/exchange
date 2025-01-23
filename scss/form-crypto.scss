@@ -91,9 +91,16 @@
   margin-top: 20px;
   gap: 12px;
 
+  cursor: pointer;
+
   input {
     position: relative;
+    cursor: pointer;
     top: 2px;
+
+    width: 14px;
+    height: 14px;
+    border-radius: 10px;
   }
 }
 

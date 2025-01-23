@@ -205,15 +205,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// preloader
-
-const preloader = document.querySelector(".preloader");
-const wrapper = document.querySelector(".wrapper");
-
-window.addEventListener("load", function () {
-  preloader.classList.add("active");
-
-  setTimeout(() => {
-    wrapper.classList.add("active");
-  }, 700);
-});

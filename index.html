@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/swiper.css" />
     <link rel="stylesheet" href="./css/swiper-min.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/preloader.css" />
 
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
   </head>
@@ -18,7 +19,7 @@
         <div class="container">
           <div class="header__inner">
             <div class="start">
-              <a href="#!" class="icon-logo">
+              <a href="./index.html" class="icon-logo">
                 <div class="start">
                   <img src="./images/logo.png" width="60" alt="logo" />
                 </div>
@@ -43,7 +44,7 @@
                 </li>
 
                 <li class="header__list-item">
-                  <a href="#!" class="header__list-link">Как это работает?</a>
+                  <a href="#how" class="header__list-link">Как это работает?</a>
                 </li>
 
                 <li class="header__list-item">
@@ -1735,7 +1736,7 @@
           </div>
         </section>
 
-        <section class="how">
+        <section class="how" id="how">
           <div class="container">
             <div class="how__inner">
               <div class="how__content">
@@ -3108,7 +3109,7 @@
           </div>
         </div>
 
-        <section class="service">
+        <section class="service" id="service">
           <div class="container">
             <div class="service__inner">
               <h2 class="title service-title">
@@ -4315,19 +4316,21 @@
             <div class="center">
               <ul class="footer__list list-reset">
                 <li class="footer__list-item">
-                  <a href="#!" class="footer__list-link">Обмен</a>
+                  <a href="#header" class="footer__list-link">Обмен</a>
                 </li>
 
                 <li class="footer__list-item">
-                  <a href="#!" class="footer__list-link">Сервисы</a>
+                  <a href="#service" class="footer__list-link">Сервисы</a>
                 </li>
 
                 <li class="footer__list-item">
-                  <a href="#!" class="footer__list-link">Локации</a>
+                  <a href="#locations-block" class="footer__list-link"
+                    >Локации</a
+                  >
                 </li>
 
                 <li class="footer__list-item">
-                  <a href="#!" class="footer__list-link">Как это работает?</a>
+                  <a href="#how" class="footer__list-link">Как это работает?</a>
                 </li>
 
                 <li class="footer__list-item">
@@ -4388,7 +4391,7 @@
     </div>
 
     <div class="preloader">
-      <img src="./images/logo.png" class="icon-preloader" alt="">
+      <img src="./images/logo.png" class="icon-preloader" alt="" />
     </div>
 
     <script defer src="./js/main.js"></script>
@@ -4437,6 +4440,21 @@
           // Перенаправляємо на нову сторінку
           window.location.href = "visa-mastercard.html";
         });
+    </script>
+
+    <script>
+      // preloader
+
+      const preloader = document.querySelector(".preloader");
+      const wrapper = document.querySelector(".wrapper");
+
+      window.addEventListener("load", function () {
+        preloader.classList.add("active");
+
+        setTimeout(() => {
+          wrapper.classList.add("active");
+        }, 700);
+      });
     </script>
   </body>
 </html>
