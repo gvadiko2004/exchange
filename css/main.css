@@ -310,6 +310,13 @@ input[type=number] {
   display: flex;
   margin-bottom: 40px;
 }
+.carousel img {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.carousel img:hover {
+  opacity: 1;
+}
 @media (max-width: 440px) {
   .carousel {
     margin-bottom: 20px;
@@ -449,6 +456,8 @@ input[type=number] {
 }
 
 .wrapper.actives {
+  -webkit-transition: none;
+  transition: none;
   -webkit-filter: blur(10px);
           filter: blur(10px);
 }
@@ -973,7 +982,7 @@ input[type=number] {
   top: 100%;
   margin-top: 10px;
   overflow: auto;
-  max-height: 142px;
+  max-height: 236px;
   white-space: nowrap;
   -webkit-transform: translateY(10px);
           transform: translateY(10px);

@@ -341,6 +341,14 @@ input[type="number"] {
 
   margin-bottom: 40px;
 
+  img {
+    opacity: 0.6;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 440px) {
     margin-bottom: 20px;
   }
@@ -448,6 +456,7 @@ input[type="number"] {
 
 .wrapper {
   &.actives {
+    transition: none;
     filter: blur(10px);
   }
 }
