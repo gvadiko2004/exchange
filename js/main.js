@@ -139,7 +139,7 @@ btnOpenSign.forEach((btnOpenForm) => {
     formUser.classList.add("active");
 
     document.querySelector(".wrapper").classList.add("active");
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   });
 });
 
@@ -147,8 +147,7 @@ btnCloseSign.addEventListener("click", function () {
   formUser.classList.remove("active");
 
   document.querySelector(".wrapper").classList.remove("active");
-  document.body.style.overflow = 'visible';
-
+  document.body.style.overflow = "visible";
 });
 
 // user__form-accbtn
