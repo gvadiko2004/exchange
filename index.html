@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./css/swiper.css" />
     <link rel="stylesheet" href="./css/swiper-min.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/preloader.css" />
 
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
   </head>
@@ -26,21 +25,21 @@
 
                 <div class="end">
                   <h4 class="icon__logo-title">SafeXchange</h4>
-                  <span class="icon__logo-slogan">Обмен под защитой</span>
+                  <span class="icon__logo-slogan">Exchange for packaging</span>
                 </div>
               </a>
 
               <ul class="header__list list-reset">
                 <li class="header__list-item">
-                  <a href="#!" class="header__list-link">Обмен</a>
+                  <a href="#header" class="header__list-link">Обмен</a>
                 </li>
 
                 <li class="header__list-item">
-                  <a href="#!" class="header__list-link">Сервисы</a>
+                  <a href="#service" class="header__list-link">Сервисы</a>
                 </li>
 
                 <li class="header__list-item">
-                  <a href="#!" class="header__list-link">Локации</a>
+                  <a href="#locations-block" class="header__list-link">Локации</a>
                 </li>
 
                 <li class="header__list-item">
@@ -1165,7 +1164,7 @@
                 </div>
 
                 <label class="rules-block">
-                  <input type="checkbox" />
+                  <input type="checkbox" id="rulesCheckbox" />
                   <h4 class="rules">
                     С <a href="#!">правилами AML/KYC</a> и
                     <a href="#!">правилами обмена</a> ознакомлен
@@ -1174,7 +1173,9 @@
 
                 <a
                   href="./visa-mastercard.html"
-                  class="btn-reset btn__hero-send"
+                  class="btn-reset btn__hero-send btn-submit"
+                  id="submitButton"
+                  style="opacity: 0.5; pointer-events: none"
                   >Обменять</a
                 >
               </div>
@@ -4327,10 +4328,6 @@
       </footer>
     </div>
 
-    <div class="preloader">
-      <img src="./images/logo.png" class="icon-preloader" alt="" />
-    </div>
-
     <div class="overlay"></div>
 
     <div class="user__form">
@@ -4384,9 +4381,7 @@
             <span>Запомнить меня</span>
           </label>
 
-          <button class="btn-reset btn-forgot-pass">
-            Восстановить пароль
-          </button>
+          <button class="btn-reset btn-forgot-pass">Восстановить пароль</button>
         </div>
 
         <button type="submit" class="btn-reset form__btn">Войти</button>
@@ -4406,6 +4401,7 @@
     </div>
 
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/form.js"></script>
     <script defer src="./js/crypto.js"></script>
     <script defer src="./js/swiper.js"></script>
     <script defer src="./js/swiper-min.js"></script>
@@ -4451,20 +4447,6 @@
           // Перенаправляємо на нову сторінку
           window.location.href = "visa-mastercard.html";
         });
-    </script>
-
-   <script>
-
-      const preloader = document.querySelector(".preloader");
-      const wrapper = document.querySelector(".wrapper");
-
-      window.addEventListener("load", function () {
-        preloader.classList.add("active");
-
-        setTimeout(() => {
-          wrapper.classList.add("active");
-        }, 700);
-      });
     </script>
   </body>
 </html>

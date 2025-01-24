@@ -462,6 +462,20 @@ input[type=number] {
           filter: blur(10px);
 }
 
+.form-content-cryptos-btn {
+  height: 60px;
+  margin-top: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .header {
   padding: 40px 0;
 }
@@ -959,9 +973,9 @@ input[type=number] {
 }
 
 .hero__select-item {
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: 1px;
   font-size: 16px;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 @media (max-width: 440px) {
@@ -1136,10 +1150,11 @@ input[type=number] {
 }
 
 .hero__dropdown-cur {
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
   bottom: 2px;
   font-size: clamp(0.75rem, 0.685rem + 0.24vw, 0.875rem);
+  font-size: 14px;
 }
 @media (max-width: 440px) {
   .hero__dropdown-cur {
@@ -1159,6 +1174,146 @@ input[type=number] {
 
 .hero__dropdown-put {
   max-height: 282px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(1) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(1) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/trx.png");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(2) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(2) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/eth-icon.png");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(3) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(3) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/bnb-icon.png");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(4) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(4) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/btc-icon.png");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(5) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(5) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/ltc-icon.png");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(6) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(6) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/bnb-icon.png");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(7) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(7) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/eth-icon.png");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(8) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(8) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/trx.png");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(9) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(9) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/doge.svg");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(10) .icon {
+  position: relative;
+}
+.hero__dropdown-put .hero__dropdown-item:nth-child(10) .icon::before {
+  position: absolute;
+  content: "";
+  bottom: -4px;
+  right: -4px;
+  background-image: url("../images/ton-icon.png");
+  background-size: cover;
+  background-position: center;
+  width: 16px;
+  height: 16px;
 }
 
 .btn__hero-send {
@@ -2822,7 +2977,7 @@ input[type=number] {
 }
 @media (max-width: 440px) {
   .form-crypto {
-    margin: 30px 0 28px 0;
+    margin: 30px 0 8px 0;
     padding-top: 24px;
   }
 }
@@ -2859,7 +3014,7 @@ input[type=number] {
 @media (max-width: 440px) {
   .form-crypto-input input {
     padding: 16px;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 .form-crypto-input input::-webkit-input-placeholder {
@@ -2894,19 +3049,19 @@ input[type=number] {
 }
 @media (max-width: 440px) {
   .form-crypto-input input::-webkit-input-placeholder {
-    font-size: 10px;
+    font-size: 11px;
   }
   .form-crypto-input input::-moz-placeholder {
-    font-size: 10px;
+    font-size: 11px;
   }
   .form-crypto-input input:-ms-input-placeholder {
-    font-size: 10px;
+    font-size: 11px;
   }
   .form-crypto-input input::-ms-input-placeholder {
-    font-size: 10px;
+    font-size: 11px;
   }
   .form-crypto-input input::placeholder {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
@@ -3178,7 +3333,6 @@ input[type=number] {
   .form-crypto-input-name {
     margin-bottom: 10px;
     font-size: 12px;
-    font-size: 12px;
   }
 }
 
@@ -3189,6 +3343,7 @@ input[type=number] {
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   margin-top: 60px;
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   .form-content-cryptos-rules {
@@ -3197,7 +3352,7 @@ input[type=number] {
     margin-top: 30px;
   }
   .form-content-cryptos-rules .form-content-cryptos-btn {
-    margin-top: 32px;
+    margin-top: 26px;
     padding: 12px 0;
   }
 }
@@ -3239,12 +3394,17 @@ input[type=number] {
   font-size: 24px;
   border-radius: 300px;
   width: 100%;
-  padding: 20px 0s;
+  padding: 20px 0;
 }
 @media (max-width: 768px) {
   .form-content-cryptos-btn {
     font-size: 16px;
     font-weight: 500;
+  }
+}
+@media (max-width: 440px) {
+  .form-content-cryptos-btn {
+    height: 50px;
   }
 }
 .form-content-cryptos-btn:hover {
@@ -3254,7 +3414,22 @@ input[type=number] {
 .form-content-cryptos-rules-info {
   font-size: 12px;
   font-weight: 300;
+}
+
+.form-content-cryptos-rules-info label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 12px;
+}
+.form-content-cryptos-rules-info label span {
+  position: relative;
+  bottom: 4px;
   text-decoration: underline;
+  font-weight: 500;
 }
 
 .footer {

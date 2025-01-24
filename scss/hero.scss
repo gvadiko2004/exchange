@@ -327,9 +327,9 @@
 }
 
 .hero__select-item {
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: 1px;
   font-size: 16px;
-  text-transform: uppercase;
   white-space: nowrap;
 
   @media (max-width: 440px) {
@@ -472,11 +472,12 @@
 }
 
 .hero__dropdown-cur {
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
   bottom: 2px;
   font-size: clamp(0.75rem, 0.685rem + 0.24vw, 0.875rem);
 
+  font-size: 14px;
   @media (max-width: 440px) {
     font-size: 10px;
     position: relative;
@@ -493,6 +494,188 @@
 
 .hero__dropdown-put {
   max-height: 282px;
+
+  .hero__dropdown-item {
+    &:nth-child(1) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/trx.png");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/eth-icon.png");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/bnb-icon.png");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/btc-icon.png");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/ltc-icon.png");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/bnb-icon.png");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:nth-child(7) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/eth-icon.png");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:nth-child(8) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/trx.png");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:nth-child(9) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/doge.svg");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &:nth-child(10) {
+      .icon {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: -4px;
+          right: -4px;
+          background-image: url("../images/ton-icon.png");
+          background-size: cover;
+          background-position: center;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
 }
 
 .btn__hero-send {

@@ -3,7 +3,7 @@
   padding-top: 40px;
   border-top: 1px solid #ffffff67;
   @media (max-width: 440px) {
-    margin: 30px 0 28px 0;
+    margin: 30px 0 8px 0;
     padding-top: 24px;
   }
   .form-content-cryptos {
@@ -38,7 +38,7 @@
 
     @media (max-width: 440px) {
       padding: 16px;
-      font-size: 12px;
+      font-size: 13px;
     }
 
     &::placeholder {
@@ -48,7 +48,7 @@
       color: #fff;
 
       @media (max-width: 440px) {
-        font-size: 10px;
+        font-size: 11px;
       }
     }
   }
@@ -309,7 +309,6 @@
   @media (max-width: 440px) {
     margin-bottom: 10px;
     font-size: 12px;
-    font-size: 12px;
   }
 }
 
@@ -318,6 +317,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   margin-top: 60px;
+  text-decoration: none;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -325,7 +325,7 @@
     margin-top: 30px;
 
     .form-content-cryptos-btn {
-      margin-top: 32px;
+      margin-top: 26px;
       padding: 12px 0;
     }
   }
@@ -368,11 +368,15 @@
   font-size: 24px;
   border-radius: 300px;
   width: 100%;
-  padding: 20px 0s;
+  padding: 20px 0;
 
   @media (max-width: 768px) {
     font-size: 16px;
     font-weight: 500;
+  }
+
+  @media (max-width: 440px) {
+   height: 50px;
   }
 
   &:hover {
@@ -383,6 +387,18 @@
 .form-content-cryptos-rules-info {
   font-size: 12px;
   font-weight: 300;
-  text-decoration: underline;
 }
 
+.form-content-cryptos-rules-info label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+
+  span {
+    position: relative;
+    bottom: 4px;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+}

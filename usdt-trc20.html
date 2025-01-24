@@ -25,25 +25,25 @@
 
                 <div class="end">
                   <h4 class="icon__logo-title">SafeXchange</h4>
-                  <span class="icon__logo-slogan">Exchange for packaging</span>
+                  <span class="icon__logo-slogan">Обмен под защитой</span>
                 </div>
               </a>
 
               <ul class="header__list list-reset">
                 <li class="header__list-item">
-                  <a href="./index.html#header" class="header__list-link">Обмен</a>
+                  <a href="#!" class="header__list-link">Обмен</a>
                 </li>
 
                 <li class="header__list-item">
-                  <a href="./index.html#service" class="header__list-link">Сервисы</a>
+                  <a href="#!" class="header__list-link">Сервисы</a>
                 </li>
 
                 <li class="header__list-item">
-                  <a href="./index.html#locations-block" class="header__list-link">Локации</a>
+                  <a href="#!" class="header__list-link">Локации</a>
                 </li>
 
                 <li class="header__list-item">
-                  <a href="./index.html#how" class="header__list-link">Как это работает?</a>
+                  <a href="#!" class="header__list-link">Как это работает?</a>
                 </li>
 
                 <li class="header__list-item">
@@ -137,9 +137,7 @@
                       </div>
 
                       <div class="pay-input pay-input-currency">
-                        <span
-                          class="data-user-input data-user-input-put"
-                        ></span>
+                        <span class="data-user-input data-user-input-put"></span>
                         <span class="data-user-currency">USDT</span>
                       </div>
 
@@ -170,9 +168,7 @@
                       </div>
 
                       <div class="pay-input pay-input-currency">
-                        <span
-                          class="data-user-input data-user-input-sell"
-                        ></span>
+                        <span class="data-user-input data-user-input-sell"></span>
                         <span class="data-user-currency">RUB</span>
                       </div>
                     </div>
@@ -256,18 +252,15 @@
                           <div class="bottom">
                             <span>
                               <div class="form-content-cryptos-rules-info">
-                                <label>
-                                  <input type="checkbox" id="rulesCheckboxs">
-                                  <span>
-                                    Нажимая кнопку “Обменять”, я соглашаюсь с
-                                    правилами и регламентами обмена
-                                  </span>
-                                </label>
-                                
-                                <a class="btn-reset form-content-cryptos-btn" id="submitButtons" style="opacity: 0.5; pointer-events: none;">
-                                  Обменять
-                                </a>
+                                Нажимая кнопку “Обменять”, я соглашаюсь с
+                                правилами и регламентами обмена
+                              </div>
+                            </span>
+                            <button class="btn-reset form-content-cryptos-btn">
+                              Обменять
+                            </button>
                           </div>
+                        </div>
                       </form>
                     </div>
                   </div>
@@ -442,80 +435,32 @@
     </div>
 
     <script defer src="./js/main.js"></script>
-    <script defer src="./js/form.js"></script>
     <script defer src="./js/crypto.js"></script>
     <script defer src="./js/swiper.js"></script>
     <script defer src="./js/swiper-min.js"></script>
 
     <script>
-      window.addEventListener("DOMContentLoaded", function () {
-        // Отримуємо з localStorage збережені значення
-        const price = localStorage.getItem("cryptoPrice");
-        const selectedCurrency = localStorage.getItem("selectedCurrency");
-        const imagePath = localStorage.getItem("imagePath");
-        const userInputPut = localStorage.getItem("userInputPut");
-        const userInputSell = localStorage.getItem("userInputSell");
-        const imagePathBank = localStorage.getItem("imagePathBank");
-        const selectedSellCurrency = localStorage.getItem(
-          "selectedSellCurrency"
-        );
+  window.addEventListener("DOMContentLoaded", function () {
+    // Отримуємо з localStorage збережені значення
+    const price = localStorage.getItem("cryptoPrice");
+    const selectedCurrency = localStorage.getItem("selectedCurrency");
+    const imagePath = localStorage.getItem("imagePath");
+    const userInputPut = localStorage.getItem("userInputPut");
+    const userInputSell = localStorage.getItem("userInputSell");
+    const imagePathBank = localStorage.getItem("imagePathBank");
+    const selectedSellCurrency = localStorage.getItem("selectedSellCurrency");
 
-        // Вставляємо отримані значення в відповідні елементи, якщо вони є
-        if (price)
-          document.querySelector(".pay-info-currencys-valut-span").textContent =
-            price;
-        if (selectedCurrency)
-          document.querySelector(".pay-input-crypto").textContent =
-            selectedCurrency;
-        if (imagePath)
-          document
-            .querySelector(".pay-input-card")
-            .setAttribute("src", imagePath);
-        if (userInputPut)
-          document.querySelector(".data-user-input-put").textContent =
-            userInputPut;
-        if (userInputSell)
-          document.querySelector(".data-user-input-sell").textContent =
-            userInputSell;
-        if (imagePathBank)
-          document
-            .querySelector(".pay-input-bank")
-            .setAttribute("src", imagePathBank);
-        if (selectedSellCurrency)
-          document.querySelector(".currency-sep-bank").textContent =
-            selectedSellCurrency;
-      });
-    </script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-    const checkbox = document.getElementById('rulesCheckboxs');
-    const submitButton = document.getElementById('submitButtons');
-  
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        submitButton.style.opacity = '1';
-        submitButton.style.pointerEvents = 'auto'; // Включаем кнопку
-      } else {
-        submitButton.style.opacity = '0.5';
-        submitButton.style.pointerEvents = 'none'; // Отключаем кнопку
-      }
-    });
-  });
-  
-  const menuBtn = document.querySelector(".btn-open");
-const menu = document.querySelector(".header__list");
-
-menuBtn.addEventListener("click", () => {
-  menu.classList.toggle("active");
-
-  if (menu.classList.contains("active")) {
-    document.body.style.overflow = "hidden";
-    window.scrollTo(0, 0);
-  } else {
-    document.body.style.overflow = "";
-  }
+    // Вставляємо отримані значення в відповідні елементи, якщо вони є
+    if (price) document.querySelector(".pay-info-currencys-valut-span").textContent = price;
+    if (selectedCurrency) document.querySelector(".pay-input-crypto").textContent = selectedCurrency;
+    if (imagePath) document.querySelector(".pay-input-card").setAttribute("src", imagePath);
+    if (userInputPut) document.querySelector(".data-user-input-put").textContent = userInputPut;
+    if (userInputSell) document.querySelector(".data-user-input-sell").textContent = userInputSell;
+    if (imagePathBank) document.querySelector(".pay-input-bank").setAttribute("src", imagePathBank);
+    if (selectedSellCurrency) document.querySelector(".currency-sep-bank").textContent = selectedSellCurrency;
 });
+
+
     </script>
   </body>
 </html>
