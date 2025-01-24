@@ -9,25 +9,95 @@ const heroIconPut = document.querySelector(".hero__icon-put img");
 let selectedCryptoPut = null;
 let cryptos = [];
 
+// Функция для получения цен криптовалют
 async function fetchCryptoPrices() {
   const response = await fetch(
     "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,litecoin,ethereum,tether,binancecoin,tron,dogecoin,dai,toncoin&vs_currencies=rub"
   );
   const data = await response.json();
 
+  // Массив криптовалют с их данными
   cryptos = [
-    { name: "Tether TRC20", price: data.tether?.rub ? data.tether.rub * 1.042 : 0, image: "./images/trc20.svg", cashForTransit: "TNX3LHH96H7VotNrL9ETD3CSQkLkcgJ9a8"},
-    { name: "Tether SOL", price: data.tether?.rub ? data.tether.rub * 1.042 : 0, image: "./images/trc20.svg", cashForTransit: "9NB7pzRTKirmC7m1dpKbH3jknJDJj1aidT4UNMKb9T1v"},
-    { name: "Tether BNB", price: data.tether?.rub ? data.tether.rub * 1.042 : 0, image: "./images/trc20.svg", cashForTransit: "0x67487417f168df08146DB7EaaBDB32bD7A479C3e" },
-    { name: "Bitcoin BTC", price: data.bitcoin?.rub ? data.bitcoin.rub * 1.042 : 0, image: "./images/btc.svg", cashForTransit: "bc1pjx67h09udncqpf2lfu6fhf0mst8qw7v98vpfq74pzpnjlh7029sssypfnu" },
-    { name: "Litecoin LTC", price: data.litecoin?.rub ? data.litecoin.rub * 1.042 : 0, image: "./images/ltc.svg", cashForTransit: "ltc1qmvyl8f3xtvse225t74sukew3j98vcwmn9j8vs6" },
-    { name: "Smart Chain BNB", price: data.binancecoin?.rub ? data.binancecoin.rub * 1.042 : 0, image: "./images/bnb.svg", cashForTransit: "0x139284fB0418D814b710896Cf7aA94EFEb39cf29" },
-    { name: "Ethereum ETH", price: data.ethereum?.rub ? data.ethereum.rub * 1.028 : 0, image: "./images/eth.svg", cashForTransit: "0x139284fB0418D814b710896Cf7aA94EFEb39cf29" },
-    { name: "Tron TRX", price: data.tron?.rub ? data.tron.rub * 1.042 : 0, image: "./images/trx.svg", cashForTransit: "TNX3LHH96H7VotNrL9ETD3CSQkLkcgJ9a8" },
-    { name: "Dogecoin DOGE", price: data.dogecoin?.rub ? data.dogecoin.rub * 1.042 : 0, image: "./images/doge.svg", cashForTransit: "DKNnyp2SMYJGPsZkY5dKPXEn1e4LdpFYVv" },
-    { name: "Tonecoin TON", price: data.toncoin?.rub ? data.toncoin.rub * 1.042 : 0, image: "./images/ton.svg", cashForTransit: "UQDDQ-FvZ6t_fQ_rpY4_muGaQ9nyIUgldxrBFPQSIkdyT5xJ" },
+    {
+      name: "Tether TRC20",
+      price: data.tether?.rub ? data.tether.rub * 1.042 : 0,
+      image: "./images/trc20.svg",
+      cashForTransit: "TNX3LHH96H7VotNrL9ETD3CSQkLkcgJ9a8",
+      cashForTransitPhoto: "./images/trc20-qr.png",
+    },
+    {
+      name: "Tether SOL",
+      price: data.tether?.rub ? data.tether.rub * 1.042 : 0,
+      image: "./images/trc20.svg",
+      cashForTransit: "9NB7pzRTKirmC7m1dpKbH3jknJDJj1aidT4UNMKb9T1v",
+    },
+    {
+      name: "Tether BNB",
+      price: data.tether?.rub ? data.tether.rub * 1.042 : 0,
+      image: "./images/trc20.svg",
+      cashForTransit: "0x67487417f168df08146DB7EaaBDB32bD7A479C3e",
+    },
+    {
+      name: "Bitcoin BTC",
+      price: data.bitcoin?.rub ? data.bitcoin.rub * 1.042 : 0,
+      image: "./images/btc.svg",
+      cashForTransit:
+        "bc1pjx67h09udncqpf2lfu6fhf0mst8qw7v98vpfq74pzpnjlh7029sssypfnu",
+    },
+    {
+      name: "Litecoin LTC",
+      price: data.litecoin?.rub ? data.litecoin.rub * 1.042 : 0,
+      image: "./images/ltc.svg",
+      cashForTransit: "ltc1qmvyl8f3xtvse225t74sukew3j98vcwmn9j8vs6",
+    },
+    {
+      name: "Smart Chain BNB",
+      price: data.binancecoin?.rub ? data.binancecoin.rub * 1.042 : 0,
+      image: "./images/bnb.svg",
+      cashForTransit: "0x139284fB0418D814b710896Cf7aA94EFEb39cf29",
+    },
+    {
+      name: "Ethereum ETH",
+      price: data.ethereum?.rub ? data.ethereum.rub * 1.028 : 0,
+      image: "./images/eth.svg",
+      cashForTransit: "0x139284fB0418D814b710896Cf7aA94EFEb39cf29",
+    },
+    {
+      name: "Tron TRX",
+      price: data.tron?.rub ? data.tron.rub * 1.042 : 0,
+      image: "./images/trx.svg",
+      cashForTransit: "TNX3LHH96H7VotNrL9ETD3CSQkLkcgJ9a8",
+    },
+    {
+      name: "Dogecoin DOGE",
+      price: data.dogecoin?.rub ? data.dogecoin.rub * 1.042 : 0,
+      image: "./images/doge.svg",
+      cashForTransit: "DKNnyp2SMYJGPsZkY5dKPXEn1e4LdpFYVv",
+    },
+    {
+      name: "Tonecoin TON",
+      price: data.toncoin?.rub ? data.toncoin.rub * 1.042 : 0,
+      image: "./images/ton.svg",
+      cashForTransit: "UQDDQ-FvZ6t_fQ_rpY4_muGaQ9nyIUgldxrBFPQSIkdyT5xJ",
+    },
   ];
+
+  // Вставляем данные в элементы на странице
+  const qrPriceOrder = document.querySelector(".user-qr-price-order");
+  const qrPriceOrderImg = document.querySelector(".image-qr-send-user");
+
+  // Обновляем текст и изображение QR
+  qrPriceOrder.innerText = cryptos[0].cashForTransit;
+  qrPriceOrderImg.src = cryptos[0].cashForTransitPhoto;
 }
+
+// Вызов функции для получения цен
+fetchCryptoPrices();
+
+
+
+
+
 
 function updateCurrencyPutText(name) {
   const currencyPutElement = document.querySelector(".currency-put");
@@ -42,7 +112,9 @@ async function updateCryptoList() {
   cryptoList.innerHTML = "";
 
   selectedCryptoPut = cryptos[0];
-  curencyPrice.innerText = `${selectedCryptoPut.name}: ${selectedCryptoPut.price.toFixed(2)} ₽`;
+  curencyPrice.innerText = `${
+    selectedCryptoPut.name
+  }: ${selectedCryptoPut.price.toFixed(2)} ₽`;
   selectPuts.textContent = selectedCryptoPut.name;
   heroIconPut.src = selectedCryptoPut.image;
   updateCurrencyPutText(selectedCryptoPut.name);
@@ -159,7 +231,9 @@ if (changeSellContainer) {
         sellIcon.alt = crypto.name;
         heroSelectSell.textContent = crypto.name;
 
-        const selectedItem = changeSellContainer.querySelector(".hero__select-item.active");
+        const selectedItem = changeSellContainer.querySelector(
+          ".hero__select-item.active"
+        );
         if (selectedItem) {
           selectedItem.textContent = crypto.name;
           const icon = selectedItem.querySelector(".svg-icon img");
@@ -189,4 +263,5 @@ if (changeSellContainer) {
   document.addEventListener("DOMContentLoaded", updateCryptoSellList);
 }
 
+//
 

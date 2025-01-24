@@ -138,7 +138,7 @@
 
                       <div class="pay-input pay-input-currency">
                         <span
-                          class="data-user-input data-user-input-put"
+                          class="data-user-input data-user-input-put" id="visa-mastercard-data"
                         ></span>
                         <span class="data-user-currency">USDT</span>
                       </div>
@@ -264,7 +264,7 @@
                                   </span>
                                 </label>
                                 
-                                <a class="btn-reset form-content-cryptos-btn" id="submitButtons" style="opacity: 0.5; pointer-events: none;">
+                                <a href="./change.html" class="btn-reset form-content-cryptos-btn" id="submitButtons" style="opacity: 0.5; pointer-events: none;">
                                   Обменять
                                 </a>
                           </div>
@@ -517,5 +517,15 @@ menuBtn.addEventListener("click", () => {
   }
 });
     </script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const userInput = document.querySelector('.data-user-input-put').getAttribute('data-user-input-put');
+    const userCurrency = document.querySelector('.data-user-input-put').getAttribute('data-user-currency');
+    
+    localStorage.setItem('user-input-put', userInput);
+    localStorage.setItem('user-currency', userCurrency);
+  });
+</script>
   </body>
 </html>

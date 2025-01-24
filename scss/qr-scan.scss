@@ -1,0 +1,86 @@
+.qr-scan {
+  // .qr-scan__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .qr-scan__content
+
+  &__content {
+    border: 1px solid #000;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+
+    background-color: #141414;
+    color: #fff;
+
+    .top {
+      .start {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  }
+}
+.container {
+}
+.qr-scan-chnge-crypto {
+}
+.qr-scan-chnge-bank {
+}
+.order-qr {
+  color: #000;
+  margin: 20px 0;
+}
+.order-qr-id {
+}
+.top {
+}
+.start {
+}
+.w-6 {
+}
+.h-6 {
+}
+.text-gray-800 {
+}
+.dark:text-white {
+}
+.price-qr {
+}
+.end {
+}
+.user-qr-price-order {
+}
+.bottom {
+}
+.content {
+}
+.image-qr-send-user {
+  margin-top: 10px;
+}
+.qr {
+}
+
+.qr-scan-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.qr-address-title {
+  margin: 2px 0;
+  color: #fff;
+  display: block;
+}

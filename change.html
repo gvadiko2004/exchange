@@ -111,164 +111,86 @@
       </header>
 
       <main class="main">
-        <section class="pay-found">
+        <div class="qr-scan">
           <div class="container">
-            <div class="pay-found__inner">
-              <h2 class="pay__title">Обмен средств</h2>
+            <div class="qr-scan__inner">
+              <h2 class="qr-scan-title">
+                Обмен <span class="qr-scan-chnge-crypto"></span> на
+                <span class="qr-scan-chnge-bank"></span>
+              </h2>
 
-              <div class="pay-found__content">
-                <h4 class="pay-found__content-septitle">
-                  - Обмен происходит автоматически, после получения 32-го
-                  подтверждения сети Tether TRC20 USDT.
-                </h4>
-                <h4 class="pay-found__content-septitle">
-                  - Среднее время вывода денежных средств на карту составляет от
-                  5 до 60 минут.
-                </h4>
+              <h3 class="order-qr">
+                Заявка ID: <span class="order-qr-id">56835</span>
+              </h3>
 
-                <div class="pay-found__form">
-                  <div class="top">
+              <div class="qr-scan__content">
+                <div class="top">
+                  <div class="start">
+                    <svg
+                      class="w-6 h-6 text-gray-800 dark:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
+                      />
+                    </svg>
+
+                    <span class="price-qr">Сумма</span>
+                  </div>
+                  <div class="end">
+                    <span class="user-qr-price-order"></span>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <div class="content">
                     <div class="start">
-                      <span class="currency-sep"> Вы платите: </span>
+                      <svg
+                        class="w-6 h-6 text-gray-800 dark:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
+                        />
+                      </svg>
 
-                      <div class="pay-input">
-                        <img class="pay-input-card" width="32" src="" alt="" />
-                        <span class="pay-input-crypto"> </span>
-                      </div>
-
-                      <div class="pay-input pay-input-currency">
-                        <span class="data-user-input data-user-input-put"></span>
-                        <span class="data-user-currency">USDT</span>
-                      </div>
-
-                      <div class="pay-info-currencys">
-                        <h4 class="pay-info-currencys-valut">
-                          Курс валюты:<br />
-                          <span class="pay-info-currencys-valut-span"></span>
-                        </h4>
-
-                        <h4 class="pay-info-currencys-valut">
-                          Минимум:<br />
-                          <span>300.00 USDT</span>
-                        </h4>
-
-                        <h4 class="pay-info-currencys-valut">
-                          Максисум:<br />
-                          <span>122 000.00 USDT</span>
-                        </h4>
-                      </div>
+                      <span class="price-qr">Адресс</span>
                     </div>
 
                     <div class="end">
-                      <span class="currency-sep"> Вы получаете: </span>
-
-                      <div class="pay-input">
-                        <img class="pay-input-bank" width="32" src="" alt="" />
-                        <span class="currency-sep-bank"> </span>
-                      </div>
-
-                      <div class="pay-input pay-input-currency">
-                        <span class="data-user-input data-user-input-sell"></span>
-                        <span class="data-user-currency">RUB</span>
-                      </div>
+                      <span class="qr-address-title" id="cashForTransit"></span>
+                      <img
+                        class="image-qr-send-user"
+                        id="cashForTransitPhoto"
+                        alt=""
+                      />
                     </div>
                   </div>
 
-                  <div class="bottom">
-                    <div class="form-cryptos form-crypto-tinkoff">
-                      <form class="form-crypto" aria-colspan="">
-                        <div class="form-content-cryptos">
-                          <div class="form-crypto-input">
-                            <span class="form-crypto-input-name">
-                              Телеграм
-                            </span>
-
-                            <input
-                              class="input-reset"
-                              type="text"
-                              placeholder="Telegram: @example"
-                            />
-                          </div>
-
-                          <div class="form-crypto-input">
-                            <span class="form-crypto-input-name">
-                              Номер карты
-                            </span>
-
-                            <input
-                              class="input-reset"
-                              type="number"
-                              placeholder="Номер карты *"
-                            />
-                          </div>
-
-                          <div class="form-crypto-input">
-                            <span class="form-crypto-input-name"> Почта </span>
-
-                            <input
-                              class="input-reset"
-                              type="email"
-                              placeholder="E-mail *"
-                            />
-                          </div>
-
-                          <div class="form-crypto-input">
-                            <span class="form-crypto-input-name">
-                              Номер телефона (СБП):
-                            </span>
-
-                            <input
-                              class="input-reset"
-                              type="number"
-                              placeholder="Номер телефона для перевода по СБП *"
-                            />
-                          </div>
-
-                          <div class="form-crypto-input">
-                            <span class="form-crypto-input-name">
-                              Фамилия Имя владельца карты:
-                            </span>
-
-                            <input
-                              class="input-reset"
-                              type="number"
-                              placeholder="ФИО *:"
-                            />
-                          </div>
-                        </div>
-
-                        <div class="form-content-cryptos-rules">
-                          <span class="form-content-cryptos-rules-title">
-                            С целью противодействия легализации доходов,
-                            полученных преступным путем и финансированию
-                            терроризма обменные пункты проводят AML-проверки
-                            поступающих от клиентов транзакций. В случае, если
-                            транзакция будет идентифицирована как
-                            высокорискованная, обменный пункт может
-                            приостановить обменную операцию до проведения
-                            проверки в соответсвии со стандартами FATF.
-                          </span>
-
-                          <div class="bottom">
-                            <span>
-                              <div class="form-content-cryptos-rules-info">
-                                Нажимая кнопку “Обменять”, я соглашаюсь с
-                                правилами и регламентами обмена
-                              </div>
-                            </span>
-                            <button class="btn-reset form-content-cryptos-btn">
-                              Обменять
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
+                  <div class="qr-image-scan">
+                    <img class="qr-image-scan-img" src="" alt="" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
 
       <div class="user__form">
@@ -436,31 +358,22 @@
 
     <script defer src="./js/main.js"></script>
     <script defer src="./js/crypto.js"></script>
-    <script defer src="./js/swiper.js"></script>
-    <script defer src="./js/swiper-min.js"></script>
 
-    <script>
-  window.addEventListener("DOMContentLoaded", function () {
-    // Отримуємо з localStorage збережені значення
-    const price = localStorage.getItem("cryptoPrice");
-    const selectedCurrency = localStorage.getItem("selectedCurrency");
-    const imagePath = localStorage.getItem("imagePath");
-    const userInputPut = localStorage.getItem("userInputPut");
-    const userInputSell = localStorage.getItem("userInputSell");
-    const imagePathBank = localStorage.getItem("imagePathBank");
-    const selectedSellCurrency = localStorage.getItem("selectedSellCurrency");
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // Извлекаем значения из localStorage
+    const userInput = localStorage.getItem('user-input-put');
+    const userCurrency = localStorage.getItem('user-currency');
+    
+    // Если данные существуют, то вставляем их в нужный элемент
+    if (userInput && userCurrency) {
+      const combinedText = `${userInput} ${userCurrency}`;
+      document.querySelector('.user-qr-price-order').innerText = combinedText;
+    } else {
+      console.error("Данные не найдены в localStorage.");
+    }
+  });
+</script>
 
-    // Вставляємо отримані значення в відповідні елементи, якщо вони є
-    if (price) document.querySelector(".pay-info-currencys-valut-span").textContent = price;
-    if (selectedCurrency) document.querySelector(".pay-input-crypto").textContent = selectedCurrency;
-    if (imagePath) document.querySelector(".pay-input-card").setAttribute("src", imagePath);
-    if (userInputPut) document.querySelector(".data-user-input-put").textContent = userInputPut;
-    if (userInputSell) document.querySelector(".data-user-input-sell").textContent = userInputSell;
-    if (imagePathBank) document.querySelector(".pay-input-bank").setAttribute("src", imagePathBank);
-    if (selectedSellCurrency) document.querySelector(".currency-sep-bank").textContent = selectedSellCurrency;
-});
-
-
-    </script>
   </body>
 </html>
