@@ -264,7 +264,7 @@
                                   </span>
                                 </label>
                                 
-                                <a href="./change.html" class="btn-reset form-content-cryptos-btn" id="submitButtons" style="opacity: 0.5; pointer-events: none;">
+                                <a href="" class="btn-reset form-content-cryptos-btn" id="submitButtons" style="opacity: 0.5; pointer-events: none;">
                                   Обменять
                                 </a>
                           </div>
@@ -449,83 +449,82 @@
 
     <script>
       window.addEventListener("DOMContentLoaded", function () {
-        // Отримуємо з localStorage збережені значення
+        // Получаем значения из localStorage
         const price = localStorage.getItem("cryptoPrice");
         const selectedCurrency = localStorage.getItem("selectedCurrency");
         const imagePath = localStorage.getItem("imagePath");
         const userInputPut = localStorage.getItem("userInputPut");
         const userInputSell = localStorage.getItem("userInputSell");
         const imagePathBank = localStorage.getItem("imagePathBank");
-        const selectedSellCurrency = localStorage.getItem(
-          "selectedSellCurrency"
-        );
-
-        // Вставляємо отримані значення в відповідні елементи, якщо вони є
-        if (price)
-          document.querySelector(".pay-info-currencys-valut-span").textContent =
-            price;
-        if (selectedCurrency)
-          document.querySelector(".pay-input-crypto").textContent =
-            selectedCurrency;
-        if (imagePath)
-          document
-            .querySelector(".pay-input-card")
-            .setAttribute("src", imagePath);
-        if (userInputPut)
-          document.querySelector(".data-user-input-put").textContent =
-            userInputPut;
-        if (userInputSell)
-          document.querySelector(".data-user-input-sell").textContent =
-            userInputSell;
-        if (imagePathBank)
-          document
-            .querySelector(".pay-input-bank")
-            .setAttribute("src", imagePathBank);
-        if (selectedSellCurrency)
-          document.querySelector(".currency-sep-bank").textContent =
-            selectedSellCurrency;
+        const selectedSellCurrency = localStorage.getItem("selectedSellCurrency");
+        
+        // Вставляем полученные значения в соответствующие элементы, если они есть
+        if (price) document.querySelector(".pay-info-currencys-valut-span").textContent = price;
+        if (selectedCurrency) document.querySelector(".pay-input-crypto").textContent = selectedCurrency;
+        if (imagePath) document.querySelector(".pay-input-card").setAttribute("src", imagePath);
+        if (userInputPut) document.querySelector(".data-user-input-put").textContent = userInputPut;
+        if (userInputSell) document.querySelector(".data-user-input-sell").textContent = userInputSell;
+        if (imagePathBank) document.querySelector(".pay-input-bank").setAttribute("src", imagePathBank);
+        if (selectedSellCurrency) document.querySelector(".currency-sep-bank").textContent = selectedSellCurrency;
+        
+        // Получаем элементы
+        const payInfoText = document.querySelector(".pay-input-crypto");
+        const formContentCryptos = document.querySelector(".form-content-cryptos-btn");
+    
+        // Если текст в payInfoText равен "USDT TRC20", изменяем ссылку на change.html
+        if (payInfoText && formContentCryptos) {
+          const cryptoText = payInfoText.textContent.trim();
+          
+          if (cryptoText === "Tether TRC20") {
+            formContentCryptos.setAttribute("href", "change.html");
+            formContentCryptos.style.opacity = "1"; // Делаем кнопку активной
+            formContentCryptos.style.pointerEvents = "auto"; // Включаем клик
+          } else {
+            formContentCryptos.setAttribute("href", "#"); // Не активируем ссылку
+            formContentCryptos.style.opacity = "0.5"; // Делаем кнопку неактивной
+            formContentCryptos.style.pointerEvents = "none"; // Блокируем клик
+          }
+        }
+    
+        // Добавляем обработчик для чекбокса
+        const checkbox = document.getElementById('rulesCheckboxs');
+        const submitButton = document.getElementById('submitButtons');
+        
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) {
+            submitButton.style.opacity = '1';
+            submitButton.style.pointerEvents = 'auto'; // Включаем кнопку
+          } else {
+            submitButton.style.opacity = '0.5';
+            submitButton.style.pointerEvents = 'none'; // Отключаем кнопку
+          }
+        });
+    
+        // Добавляем обработчик для меню
+        const menuBtn = document.querySelector(".btn-open");
+        const menu = document.querySelector(".header__list");
+    
+        menuBtn.addEventListener("click", () => {
+          menu.classList.toggle("active");
+    
+          if (menu.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+            window.scrollTo(0, 0);
+          } else {
+            document.body.style.overflow = "";
+          }
+        });
+    
+        // Сохраняем данные в localStorage
+        const userInput = document.querySelector('.data-user-input-put').getAttribute('data-user-input-put');
+        const userCurrency = document.querySelector('.data-user-input-put').getAttribute('data-user-currency');
+    
+        localStorage.setItem('user-input-put', userInput);
+        localStorage.setItem('user-currency', userCurrency);
       });
     </script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-    const checkbox = document.getElementById('rulesCheckboxs');
-    const submitButton = document.getElementById('submitButtons');
-  
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        submitButton.style.opacity = '1';
-        submitButton.style.pointerEvents = 'auto'; // Включаем кнопку
-      } else {
-        submitButton.style.opacity = '0.5';
-        submitButton.style.pointerEvents = 'none'; // Отключаем кнопку
-      }
-    });
-  });
-  
-  const menuBtn = document.querySelector(".btn-open");
-const menu = document.querySelector(".header__list");
-
-menuBtn.addEventListener("click", () => {
-  menu.classList.toggle("active");
-
-  if (menu.classList.contains("active")) {
-    document.body.style.overflow = "hidden";
-    window.scrollTo(0, 0);
-  } else {
-    document.body.style.overflow = "";
-  }
-});
-    </script>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const userInput = document.querySelector('.data-user-input-put').getAttribute('data-user-input-put');
-    const userCurrency = document.querySelector('.data-user-input-put').getAttribute('data-user-currency');
     
-    localStorage.setItem('user-input-put', userInput);
-    localStorage.setItem('user-currency', userCurrency);
-  });
-</script>
+    
+    
   </body>
 </html>

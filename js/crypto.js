@@ -9,14 +9,12 @@ const heroIconPut = document.querySelector(".hero__icon-put img");
 let selectedCryptoPut = null;
 let cryptos = [];
 
-// Функция для получения цен криптовалют
 async function fetchCryptoPrices() {
   const response = await fetch(
     "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,litecoin,ethereum,tether,binancecoin,tron,dogecoin,dai,toncoin&vs_currencies=rub"
   );
   const data = await response.json();
 
-  // Массив криптовалют с их данными
   cryptos = [
     {
       name: "Tether TRC20",
@@ -81,23 +79,7 @@ async function fetchCryptoPrices() {
       cashForTransit: "UQDDQ-FvZ6t_fQ_rpY4_muGaQ9nyIUgldxrBFPQSIkdyT5xJ",
     },
   ];
-
-  // Вставляем данные в элементы на странице
-  const qrPriceOrder = document.querySelector(".user-qr-price-order");
-  const qrPriceOrderImg = document.querySelector(".image-qr-send-user");
-
-  // Обновляем текст и изображение QR
-  qrPriceOrder.innerText = cryptos[0].cashForTransit;
-  qrPriceOrderImg.src = cryptos[0].cashForTransitPhoto;
 }
-
-// Вызов функции для получения цен
-fetchCryptoPrices();
-
-
-
-
-
 
 function updateCurrencyPutText(name) {
   const currencyPutElement = document.querySelector(".currency-put");
@@ -264,4 +246,3 @@ if (changeSellContainer) {
 }
 
 //
-

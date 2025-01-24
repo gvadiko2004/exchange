@@ -22,8 +22,17 @@
     justify-content: center;
     gap: 20px;
 
+    border-radius: 24px;
+
     background-color: #141414;
     color: #fff;
+
+    margin-bottom: 80px;
+
+    @media (max-width: 440px) {
+      border-radius: 14px;
+      margin-bottom: 40px;
+    }
 
     .top {
       .start {
@@ -43,6 +52,11 @@
 .order-qr {
   color: #000;
   margin: 20px 0;
+
+  @media (max-width: 440px) {
+    margin: 10px 0 20px 0;
+    font-size: 14px;
+  }
 }
 .order-qr-id {
 }
@@ -77,6 +91,10 @@
 .qr-scan-title {
   font-size: 32px;
   font-weight: 600;
+
+  @media (max-width: 440px) {
+    font-size: 24px !important;
+  }
 }
 
 .qr-address-title {
